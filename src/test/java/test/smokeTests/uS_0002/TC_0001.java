@@ -10,8 +10,6 @@ public class TC_0001 {
     @Test
     public void test () {
         reusableMethods.login();
-        //tarik_burak _kumcu
-        System.out.println("Hello WORLD");
 
     }
 }

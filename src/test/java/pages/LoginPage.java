@@ -21,4 +21,7 @@ public class LoginPage {
     @FindBy (id = "btnSubmit")
     public WebElement loginButton;
 
+    @FindBy(xpath = "//a[@class='btn-custom']")
+    public WebElement creatButton;
+
 }

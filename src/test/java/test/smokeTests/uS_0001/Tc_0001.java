@@ -24,14 +24,14 @@ public class Tc_0001 {
     public void tC_0001 (){
 
         reusableMethods.login();
-//        SoftAssert softAssert = new SoftAssert();
-//        softAssert.assertTrue(mainPage.homeLink.isDisplayed(),"Test for visibility of 'Home Button' is failed!");
-//        softAssert.assertTrue(mainPage.roomsLink.isDisplayed(),"Test for visibility of 'Rooms Button' is failed!");
-//        softAssert.assertTrue(mainPage.restaurantLink.isDisplayed(),"Test for visibility of 'Restaurant Button' is failed!");
-//        softAssert.assertTrue(mainPage.aboutLink.isDisplayed(),"Test for visibility of 'About Button' is failed!");
-//        softAssert.assertTrue(mainPage.blogLink.isDisplayed(),"Test for visibility of 'Blog Button' is failed!");
-//        softAssert.assertTrue(mainPage.contactLink.isDisplayed(),"Test for visibility of 'Contact Button' is failed!");
-//        softAssert.assertTrue(mainPage.loginLink.isDisplayed(),"Test for visibility of 'Log in Button' is failed!");
-//        softAssert.assertAll();
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertTrue(mainPage.homeLink.isDisplayed(),"Test for visibility of 'Home Button' is failed!");
+        softAssert.assertTrue(mainPage.roomsLink.isDisplayed(),"Test for visibility of 'Rooms Button' is failed!");
+        softAssert.assertTrue(mainPage.restaurantLink.isDisplayed(),"Test for visibility of 'Restaurant Button' is failed!");
+        softAssert.assertTrue(mainPage.aboutLink.isDisplayed(),"Test for visibility of 'About Button' is failed!");
+        softAssert.assertTrue(mainPage.blogLink.isDisplayed(),"Test for visibility of 'Blog Button' is failed!");
+        softAssert.assertTrue(mainPage.contactLink.isDisplayed(),"Test for visibility of 'Contact Button' is failed!");
+        softAssert.assertTrue(mainPage.loginLink.isDisplayed(),"Test for visibility of 'Log in Button' is failed!");
+        softAssert.assertAll();
     }
 }

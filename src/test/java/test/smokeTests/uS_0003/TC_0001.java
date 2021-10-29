@@ -1,4 +1,4 @@
-package test.smokeTests.uS_0001;
+package test.smokeTests.uS_0003;
 
 import org.testng.annotations.Test;
 import pages.MainPage;
@@ -6,15 +6,11 @@ import utilities.ConfigReader;
 import utilities.Driver;
 
 public class TC_0001 {
-
-    MainPage mainPage = new MainPage();
-
     @Test
-    public void test(){
-
+    public void tc_0001(){
         Driver.getDriver().get(ConfigReader.getProperty("mainUrl"));
+        MainPage mainPage=new MainPage();
         mainPage.loginLink.click();
-
     }
 
 }

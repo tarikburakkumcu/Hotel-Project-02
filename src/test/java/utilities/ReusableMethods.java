@@ -1,5 +1,7 @@
 package utilities;
 
+import org.testng.Assert;
+import pages.DefaultPage;
 import pages.LoginPage;
 import pages.MainPage;
 
@@ -7,6 +9,7 @@ public class ReusableMethods {
 
     MainPage mainPage = new MainPage();
     LoginPage loginPage = new LoginPage();
+    DefaultPage defaultPage = new DefaultPage();
 
     public void login() {
 
@@ -32,5 +35,10 @@ public class ReusableMethods {
 
     public void goToUrl() {
         Driver.getDriver().get(ConfigReader.getProperty("mainUrl"));
+    }
+
+    public void hotelRooms() {
+        defaultPage.hotelManagementLinki.click();
+        defaultPage.hotelRoomsLinki.click();
     }
 }

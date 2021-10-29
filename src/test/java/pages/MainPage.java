@@ -14,7 +14,26 @@ public class MainPage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy (linkText = "Log in")
+
+    @FindBy (xpath = "//li[contains( @id, 'Log')]")
     public WebElement loginLink;
+
+    @FindBy (linkText = "Home")
+    public WebElement homeLink;
+
+    @FindBy (linkText = "Rooms")
+    public WebElement roomsLink;
+
+    @FindBy (linkText = "Restaurant")
+    public WebElement restaurantLink;
+
+    @FindBy (linkText = "About")
+    public WebElement aboutLink;
+
+    @FindBy (linkText = "Blog")
+    public WebElement blogLink;
+
+    @FindBy (linkText = "Contact")
+    public WebElement contactLink;
 
 }

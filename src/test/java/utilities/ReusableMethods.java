@@ -1,7 +1,5 @@
 package utilities;
 
-import org.testng.Assert;
-import pages.DefaultPage;
 import pages.LoginPage;
 import pages.MainPage;
 
@@ -10,20 +8,29 @@ public class ReusableMethods {
     MainPage mainPage = new MainPage();
     LoginPage loginPage = new LoginPage();
 
-    public void login () {
+    public void login() {
 
-        Driver.getDriver().get(ConfigReader.getProperty("mainUrl"));
+        goToUrl();
+
+        /*
+    (Oguz)
+    Mehmet Hoca'nin bahsettigi: "Tum testleri birlikte calistirmak, calisan bazi test case'lerin calismamasina sebep olabilir"
+    sorununa onlem olarak asagidaki adimlari ekledim.
+    Orn: Log In -> Log Out problemi.
+    */
         mainPage.loginLink.click();
+            if (!Driver.getDriver().getCurrentUrl().equals(ConfigReader.getProperty("loginUrl"))) {
+                goToUrl();
+                mainPage.loginLink.click();
+            }
+
         loginPage.usernameBox.sendKeys(ConfigReader.getProperty("validUserName"));
         loginPage.passwordBox.sendKeys(ConfigReader.getProperty("validPassword"));
         loginPage.loginButton.click();
-    }
-    public void hotelRooms(){
-        DefaultPage defaultPage=new DefaultPage();
-        defaultPage.hotelManagementLinki.click();
-        defaultPage.hotelRoomsLinki.click();
-        Assert.assertTrue(defaultPage.listOfHotelRooms.isDisplayed());
+
     }
 
-
+    public void goToUrl() {
+        Driver.getDriver().get(ConfigReader.getProperty("mainUrl"));
+    }
 }

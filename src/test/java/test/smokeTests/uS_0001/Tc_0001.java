@@ -33,5 +33,6 @@ public class Tc_0001 {
         softAssert.assertTrue(mainPage.contactLink.isDisplayed(),"Test for visibility of 'Contact Button' is failed!");
         softAssert.assertTrue(mainPage.loginLink.isDisplayed(),"Test for visibility of 'Log in Button' is failed!");
         softAssert.assertAll();
+        //asdfasdf
     }
 }

@@ -27,16 +27,8 @@ public class DefaultPage {
     @FindBy(xpath = "(//*[@class='btn btn-xs default'])[1]")
     public WebElement detailsHotelLinki;
 
-
-
-
-
-
-
-
-
-
-
+    @FindBy (className = "caption")
+    public WebElement listOfUsersText;
 
 
 

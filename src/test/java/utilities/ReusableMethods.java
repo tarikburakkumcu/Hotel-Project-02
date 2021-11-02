@@ -1,5 +1,6 @@
 package utilities;
 
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import pages.DefaultPage;
 import pages.LoginPage;
@@ -40,5 +41,6 @@ public class ReusableMethods {
     public void hotelRooms() {
         defaultPage.hotelManagementLinki.click();
         defaultPage.hotelRoomsLinki.click();
-    }
+
+}
 }

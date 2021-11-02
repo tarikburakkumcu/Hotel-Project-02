@@ -2,7 +2,6 @@ package test.smokeTests.uS_0005;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.DefaultPage;
 import utilities.Driver;
@@ -10,9 +9,9 @@ import utilities.ReusableMethods;
 
 import java.util.Set;
 
-public class TC_0005 {
+public class TC_0006 {
 
-    //5)"Delete" butonuna tıklanılabilmeli "Would you like to continue?" yazısı görünürlüğü test edilmeli.
+    //6)"Ok" butonuna tıklanılabilmeli  ve otel bilgisi silinebilmeli
 
     DefaultPage defaultPage = new DefaultPage();
     ReusableMethods reusableMethods = new ReusableMethods();
@@ -44,14 +43,11 @@ public class TC_0005 {
         WebElement deleteButonu = Driver.getDriver().findElement(By.xpath("//button[@id='btnDelete']"));
         deleteButonu.click();
 
-        Thread.sleep(3000);
-        String uyariYazisi = Driver.getDriver().findElement(By.xpath("//div[@class='bootbox-body']")).getText();
-        String expectedResult ="Would you like to continue?";
-        Assert.assertEquals(expectedResult,uyariYazisi,"uyari yazisi ile uyuşmuyor");
 
-
-
+        WebElement okButonu = Driver.getDriver().findElement(By.xpath("//button[@data-bb-handler='confirm']"));
+        okButonu.click();
+        Thread.sleep(5000);
 
     }
-}
 
+    }

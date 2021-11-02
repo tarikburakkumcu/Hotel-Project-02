@@ -5,20 +5,22 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.DefaultPage;
+import pages.LoginPage;
+import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
+import java.nio.ByteBuffer;
 import java.util.Set;
 
-public class TC_0005 {
-
-    //5)"Delete" butonuna tıklanılabilmeli "Would you like to continue?" yazısı görünürlüğü test edilmeli.
+public class TC_0004 {
+    //4)"Hotel was updated successfully" Yazısı görebilmeli ve "Ok" Butonu tıklanılabilmeli
 
     DefaultPage defaultPage = new DefaultPage();
     ReusableMethods reusableMethods = new ReusableMethods();
 
     @Test
-    public void tc_0005() throws InterruptedException {
+    public void tc_0004() throws InterruptedException {
 
         reusableMethods.login();
         defaultPage.hotelManagementLinki.click();
@@ -41,17 +43,20 @@ public class TC_0005 {
         System.out.println("ikinci sayfa handle değeri :" + ikinciWindowHandleDegeri);
         Driver.getDriver().switchTo().window(ikinciWindowHandleDegeri);
 
-        WebElement deleteButonu = Driver.getDriver().findElement(By.xpath("//button[@id='btnDelete']"));
-        deleteButonu.click();
+
+        WebElement saveButonu = Driver.getDriver().findElement(By.xpath("//button[@class='btn green'][1]"));
+        saveButonu.click();
 
         Thread.sleep(3000);
-        String uyariYazisi = Driver.getDriver().findElement(By.xpath("//div[@class='bootbox-body']")).getText();
-        String expectedResult ="Would you like to continue?";
-        Assert.assertEquals(expectedResult,uyariYazisi,"uyari yazisi ile uyuşmuyor");
+        String uptadeYazisi = Driver.getDriver().findElement(By.xpath("//div[@class='bootbox-body']")).getText();
+        String expectedResult ="Hotel was updated successfully";
+        Assert.assertEquals(uptadeYazisi,expectedResult,"Update yazısı birbiriyle uyuşmuyor");
 
+        WebElement okButonu = Driver.getDriver().findElement(By.xpath("(//button[@type='button'])[6]"));
+        okButonu.click();
 
 
 
     }
-}
 
+}

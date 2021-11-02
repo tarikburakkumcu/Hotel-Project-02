@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -21,12 +22,49 @@ public class DefaultPage {
     public WebElement listOfHotelRooms;
 
 
+    @FindBy(partialLinkText = "Room reservation")
+    public WebElement roomReservationLinki;
+
+    @FindBy(xpath = "//span[@class='caption-subject font-green-sharp bold uppercase']")
+    public WebElement listOfRoomReservation;
+
+
+    @FindBy(xpath = "//input[@name='ContactNameSurname']")
+    public WebElement contactNameSurnameKutusu;
+
+    @FindBy(xpath = "//button[@class='btn btn-sm yellow filter-submit margin-bottom']")
+    public WebElement searchButonu;
+
+    @FindBy(xpath = "//th[@class='sorting_asc']")
+    public WebElement contactNameSurnameKutusuGecis;
+
+    @FindBy(xpath = "//a[@class='btn btn-xs default']")
+   public WebElement detailsButonu;
+
+    @FindBy(xpath = "//div[@class='caption']")
+   public WebElement editHotelRoomReservationButonu;
+
+    @FindBy(id = "btnDelete")
+    public WebElement deleteButonu;
+
+    @FindBy(xpath = "//input[@id='Approved']")
+    public WebElement generalDataApprovedButonu;
+
+    @FindBy(xpath = "//select[@id='lkpBarcodeTypes']")
+    public WebElement tipListesi;
+
+    @FindBy(id = "txtBarcodeCode")
+    public WebElement codeButonu;
 
 
 
+    @FindBy(xpath = "//input[@id='IsPaid']")
+    public WebElement generalDataIsPaid;
 
+    @FindBy(xpath = "//button[@class='btn green']")
+    public WebElement generalDataSaveButonu;
 
-
-
+    @FindBy(xpath = "//a[text()='Properties']")
+    public WebElement propertiesLinki;
 
 }

@@ -20,6 +20,16 @@ public class DefaultPage {
     @FindBy(xpath = "//span[text()='List Of Hotelrooms']")
     public WebElement listOfHotelRooms;
 
+    @FindBy(linkText = "ListOfUsers")
+    public WebElement listOfUsersText;
+
+    @FindBy (xpath = "//span[text()='Add Hotelroom ']")
+    public WebElement addHotelRoomBtn;
+
+    @FindBy(xpath ="//div[@class='caption']")
+    public WebElement createHotelRoomText;
+
+
 
 
 

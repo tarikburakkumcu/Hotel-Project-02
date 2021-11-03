@@ -30,7 +30,7 @@ public class TC_0004 {
     ReusableMethods reusableMethods = new ReusableMethods();
     DefaultPage defaultPage = new DefaultPage();
     Actions actions = new Actions(Driver.getDriver());
-
+    JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
     @Test
     public void test() throws InterruptedException {
 
@@ -73,7 +73,16 @@ public class TC_0004 {
 
         //13-"code" , "value" boxları doldurun/update edin
 
-        actions.click(defaultPage.codeButonu).sendKeys(ConfigReader.getProperty("code"));
+        defaultPage.codeButonu.sendKeys(ConfigReader.getProperty("code"));
+
+        defaultPage.valueButonu.sendKeys(ConfigReader.getProperty("value"));
+
         //14-"Save" butonuna tıklayıp, kaydedildiğini dogrulayın
+        js.executeScript("window.scrollBy(0,600)");
+
+        defaultPage.propertiesSaveButonu.click();
+
+        // Assert.assertTrue(defaultPage.???????????????.isDisplay);
+
     }
 }

@@ -61,9 +61,6 @@ public class DefaultPage {
     @FindBy(id = "btnDelete")
     public WebElement deleteButonu;
 
-    @FindBy(xpath = "//input[@id='Approved']")
-    public WebElement generalDataApprovedButonu;
-
     @FindBy(xpath = "//select[@id='lkpBarcodeTypes']")
     public WebElement tipListesi;
 
@@ -72,6 +69,9 @@ public class DefaultPage {
 
     @FindBy(xpath = "//input[@id='IsPaid']")
     public WebElement generalDataIsPaid;
+
+    @FindBy(id="txtBarcode")
+    public WebElement valueButonu;
 
     @FindBy(xpath = "//button[@class='btn green']")
     public WebElement generalDataSaveButonu;
@@ -82,4 +82,9 @@ public class DefaultPage {
     @FindBy(xpath = "(//*[@class='btn btn-xs default'])[1]")
     public WebElement detailsHotelLinki;
 
+    @FindBy(xpath = "(//button[@class='btn green'])[2]")
+    public WebElement propertiesSaveButonu;
+
+    @FindBy(xpath = "//input[@id='DateStart']")
+    public WebElement dateStart;
 }

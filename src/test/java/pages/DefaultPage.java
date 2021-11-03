@@ -21,20 +21,11 @@ public class DefaultPage {
    @FindBy(partialLinkText = "Hotel Rooms")
    public WebElement hotelRoomsLinki;
 
-   @FindBy(partialLinkText = "Hotel Rooms")
-    public WebElement hotelRoomsLinki;
-
    @FindBy(xpath = "//span[text()='List Of Hotelrooms']")
    public WebElement listOfHotelRooms;
 
-   @FindBy(xpath = "//span[text()='Hotel Management']")
-    public WebElement hotelManagementLinki;
-
    @FindBy(partialLinkText = "Hotel List")
     public WebElement hotelListLink;
-
-   @FindBy(xpath = "//span[text()='List Of Hotelrooms']")
-    public WebElement listOfHotelRooms;
 
    @FindBy(partialLinkText = "Room reservation")
     public WebElement roomReservationLinki;
@@ -44,9 +35,6 @@ public class DefaultPage {
 
    @FindBy(xpath = "(//a[@class='btn btn-xs default'])[1]")
    public WebElement listOfHotelRoomsDetailsButon;
-
-   @FindBy(partialLinkText = "Hotel List")
-    public WebElement hotelListLink;
 
     @FindBy(xpath = "//input[@name='ContactNameSurname']")
     public WebElement contactNameSurnameKutusu;

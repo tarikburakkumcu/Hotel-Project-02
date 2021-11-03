@@ -18,7 +18,7 @@ public class TC_0001 {
 //    5) "Login" Butonuna tıklanır
 ReusableMethods reusableMethods = new ReusableMethods();
     @Test
-    public void test(){
+    public void test() throws InterruptedException {
     reusableMethods.login();
 //    6) "Hotel Management" menüsüne tıklanır
      DefaultPage defaultPage=new DefaultPage();
@@ -27,10 +27,8 @@ ReusableMethods reusableMethods = new ReusableMethods();
      defaultPage.hotelRoomsLinki.click();
 //    8) Çıkan sayfada "LIST OF HOTELROOMS" yazısı görüldüğünü kontrol edilir
         Assert.assertTrue(defaultPage.listOfHotelRooms.isDisplayed());
-
-
-
-
+        Thread.sleep(3000);
+        //Driver.closeDriver();
     }
 
 }

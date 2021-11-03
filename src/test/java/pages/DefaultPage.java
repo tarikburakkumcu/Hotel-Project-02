@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -20,6 +21,9 @@ public class DefaultPage {
     @FindBy(xpath = "//span[text()='List Of Hotelrooms']")
     public WebElement listOfHotelRooms;
 
+    @FindBy(partialLinkText = "Hotel List")
+    public WebElement hotelListLink;
+
     @FindBy(linkText = "ListOfUsers")
     public WebElement listOfUsersText;
 
@@ -29,11 +33,8 @@ public class DefaultPage {
     @FindBy(xpath ="//div[@class='caption']")
     public WebElement createHotelRoomText;
 
-
-
-
-
-
+    @FindBy(xpath = "(//*[@class='btn btn-xs default'])[1]")
+    public WebElement detailsHotelLinki;
 
 
 

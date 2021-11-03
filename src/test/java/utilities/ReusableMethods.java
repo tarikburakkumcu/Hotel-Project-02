@@ -1,18 +1,15 @@
 package utilities;
 
 import org.apache.commons.io.FileUtils;
-
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
-
 import org.testng.Assert;
 import pages.DefaultPage;
 import pages.LoginPage;
 import pages.MainPage;
 import pages.RegisterPage;
-
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -25,7 +22,7 @@ public class ReusableMethods {
     static MainPage mainPage = new MainPage();
     static LoginPage loginPage = new LoginPage();
     static DefaultPage defaultPage = new DefaultPage();
-    RegisterPage registerPage = new RegisterPage();
+    static RegisterPage registerPage = new RegisterPage();
 
     public static void login() {
 
@@ -42,6 +39,7 @@ public class ReusableMethods {
     Orn: Log In -> Log Out problemi.
     */
             mainPage.loginLink.click();
+
             if (!Driver.getDriver().getCurrentUrl().equals(ConfigReader.getProperty("loginUrl"))) {
                 goToUrl();
                 mainPage.loginLink.click();
@@ -56,13 +54,15 @@ public class ReusableMethods {
             Driver.getDriver().get(ConfigReader.getProperty("mainUrl"));
         }
 
+
+
         public static void hotelRooms () {
             defaultPage.hotelManagementLinki.click();
             defaultPage.hotelRoomsLinki.click();
         }
 
 
-        public static void waitFor ( int sec){
+        public static void waitFor ( int sec) {
 
             try {
                 Thread.sleep(sec * 1000);
@@ -70,6 +70,7 @@ public class ReusableMethods {
                 e.printStackTrace();
             }
         }
+
         public static void scrollTo (WebElement element){
             JavascriptExecutor javascriptExecutor = (JavascriptExecutor) Driver.getDriver();
             javascriptExecutor.executeScript("arguments[0].scrollIntoView(true);", element);

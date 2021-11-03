@@ -3,6 +3,7 @@ package test.smokeTests.uS_0009;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.DefaultPage;
 import utilities.ConfigReader;
@@ -26,7 +27,7 @@ public class TC_0005 {
     ReusableMethods reusableMethods = new ReusableMethods();
     DefaultPage defaultPage = new DefaultPage();
     Actions actions = new Actions(Driver.getDriver());
-
+    JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
 
     @Test
     public void test() throws InterruptedException {
@@ -58,9 +59,13 @@ public class TC_0005 {
         actions.click(defaultPage.detailsButonu).perform();
 
         //11-Sayfayı asgı kaydırarak "Delete" box tıklayın
-       actions.sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).perform();
 
+        js.executeScript("window.scrollBy(0,600)");
+
+        defaultPage.deleteButonu.click();
         //12-reservation ın silindiğinden emin olun
+
+       // Assert.assertTrue(defaultPage.???????????????.isDisplay);
 
     }
 }

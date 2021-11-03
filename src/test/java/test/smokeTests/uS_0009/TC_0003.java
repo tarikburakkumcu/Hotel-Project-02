@@ -20,10 +20,8 @@ public class TC_0003 {
     //8-"List of reservation" listesinde "contactNameSurname" butonuna "hasan sade" yazın
     //9-Sayfayı sağa kaydırarak "search" butonunu bulun ve tıklayın
     //10-Cıkan sonucu "Details" butonuna tıklayarak secin
-    //11-"Edit Hotelroomreservatıon"  altında "general data" tıklanır
-    //12-"Hotel room", "user", "price", "date" vb tüm boxların bilgileri update edin
-    //13-"Approved", "isPaid" boxları tıklayın
-    //13-"Save" butonuna tıklayıp, kaydedildiğinden emin olun
+    //11-"Date Start",  tarihini update edin
+    //12-"Save" butonuna tıklayıp, kaydedildiğinden emin olun
 
 
     ReusableMethods reusableMethods = new ReusableMethods();
@@ -64,12 +62,19 @@ public class TC_0003 {
 
         js.executeScript("window.scrollBy(0,600)");
         
-        //11-"Hotel room", "user", "price", "date" vb tüm boxların bilgileri update edin
-        //12-"Approved", "isPaid" boxları tıklayın
-        //13-"Save" butonuna tıklayıp, kaydedildiğinden emin olun
+        //11-"Date Start",  tarihini update edin
+
+        defaultPage.dateStart.clear();
+        defaultPage.dateStart.sendKeys(ConfigReader.getProperty("dateStart"));
+
+        js.executeScript("window.scrollBy(0,600)");
 
 
+        //12-"Save" butonuna tıklayıp, kaydedildiğinden emin olun
 
+        defaultPage.generalDataSaveButonu.click();
+
+        // Assert.assertTrue(defaultPage.???????????????.isDisplay);
 
     }
 

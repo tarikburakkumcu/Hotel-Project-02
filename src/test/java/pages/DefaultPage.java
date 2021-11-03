@@ -25,15 +25,19 @@ public class DefaultPage {
    @FindBy(xpath = "(//a[@class='btn btn-xs default'])[1]")
    public WebElement listOfHotelRoomsDetailsButon;
 
+    @FindBy(partialLinkText = "Hotel List")
+    public WebElement hotelListLink;
 
+    @FindBy(linkText = "ListOfUsers")
+    public WebElement listOfUsersText;
 
+    @FindBy (xpath = "//span[text()='Add Hotelroom ']")
+    public WebElement addHotelRoomBtn;
 
+    @FindBy(xpath ="//div[@class='caption']")
+    public WebElement createHotelRoomText;
 
-
-
-
-
-
-
+    @FindBy(xpath = "(//*[@class='btn btn-xs default'])[1]")
+    public WebElement detailsHotelLinki;
 
 }

@@ -87,6 +87,6 @@ public class TC_0003 {
         Thread.sleep(2000);
         hotelRoomPage.editHotelRoomErrorOkButton.click();
         //not bahse konu room'a ait rezervasyonlari silmeye calissakta rezervasyonlar silinmiyor
-        Driver.closeDriver();
+        //Driver.closeDriver();
     }
 }

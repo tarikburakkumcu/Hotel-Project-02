@@ -73,6 +73,11 @@ public class HotelRoomPage {
     public WebElement editHotelRoomPropertiesErrorOkButton;
 
 
+    @FindBy (id = "IsAvailable")
+    public WebElement editHotelRoomIsAvailableButton;
+
+
+
 
 
 

@@ -75,6 +75,9 @@ WebElement dropdown=Driver.getDriver().findElement(By.id("IDGroupRoomType"));
         hotelRoomPage.editHotelRoomMaxChildrenCount.clear();
         hotelRoomPage.editHotelRoomMaxChildrenCount.sendKeys(ConfigReader.getProperty("editHotelRoomMaxChildrenCount"));
 //19) save butonunu tıklayınır
+        Thread.sleep(2000);
+        hotelRoomPage.editHotelRoomIsAvailableButton.click();
+        Thread.sleep(2000);
         hotelRoomPage.editHotelRoomSaveButton.click();
         Thread.sleep(2000);
 //iptal 20) "HotelRoom was updated successfully" yazısının ekranda çıktığını görülür

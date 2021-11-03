@@ -24,18 +24,18 @@ public class Tc_0003 extends TestBaseFinal {
     public void tC_0003 (){
 
         mainPage = new MainPage();
-        extendTest = extentReports.createTest("TC_0003 Test For Available Room Part","Elements At The Available Room Part Should Be Visible");
+        extentTest = extentReports.createTest("TC_0003 Test For Available Room Part","Elements At The Available Room Part Should Be Visible");
         ReusableMethods.goToUrl();
-        extendTest.info("Go to URL");
+        extentTest.info("Go to URL");
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(mainPage.checkInDateText.isDisplayed(),"Test for visibility of 'Check-in Date Text' is failed!");
-        extendTest.pass("Check-in Date Text is visible");
+        extentTest.pass("Check-in Date Text is visible");
         softAssert.assertTrue(mainPage.checkOutDateText.isDisplayed(),"Test for visibility of 'Check-out Date Text' is failed!");
-        extendTest.pass("Check-out Date Text is visible");
+        extentTest.pass("Check-out Date Text is visible");
         softAssert.assertTrue(mainPage.roomText.isDisplayed(),"Test for visibility of 'Room Text' is failed!");
-        extendTest.pass("Room Text is visible");
+        extentTest.pass("Room Text is visible");
         softAssert.assertTrue(mainPage.customerText.isDisplayed(),"Test for visibility of 'Customer Text' is failed!");
-        extendTest.pass("Customer Text is visible");
+        extentTest.pass("Customer Text is visible");
         softAssert.assertAll();
     }
 }

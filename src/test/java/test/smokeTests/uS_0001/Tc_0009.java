@@ -21,9 +21,9 @@ public class Tc_0009 extends TestBaseFinal {
     public void tC_0009() {
 
         mainPage = new MainPage();
-        extendTest = extentReports.createTest("TC_0009 Test For Instagram Part", "Instagram part should be visible and elements inside it should be clickable");
+        extentTest = extentReports.createTest("TC_0009 Test For Instagram Part", "Instagram part should be visible and elements inside it should be clickable");
         ReusableMethods.goToUrl();
-        extendTest.info("Go to URL");
+        extentTest.info("Go to URL");
         ReusableMethods.scrollTo(mainPage.instagramPart);
         SoftAssert softAssert = new SoftAssert();
 
@@ -32,13 +32,13 @@ public class Tc_0009 extends TestBaseFinal {
             nameOfPictures = nameOfPictures.substring(nameOfPictures.indexOf("/"),nameOfPictures.indexOf(")")-1);
             System.out.println(nameOfPictures);
             mainPage.instagramPartPictures.get(i).click();
-            extendTest.info("Click " + (i+1) +". picture");
+            extentTest.info("Click " + (i+1) +". picture");
             ReusableMethods.waitFor(1);
             WebElement selectedPicture = Driver.getDriver().findElement(By.xpath("//img[@src='"+nameOfPictures+"']"));
             softAssert.assertTrue(selectedPicture.isDisplayed(),"Test for 'Clicking The Element in Instagram Part' is failed!'");
             mainPage.instagramPartEscButton.click();
             softAssert.assertAll();
-            extendTest.pass((i+1) +". picture in the instagram part is clickable");
+            extentTest.pass((i+1) +". picture in the instagram part is clickable");
         }
     }
 }

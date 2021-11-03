@@ -15,7 +15,7 @@ import java.util.stream.StreamSupport;
 public class TestBaseFinal {
 
     protected static ExtentReports extentReports;
-    protected static ExtentTest extendTest;
+    protected static ExtentTest extentTest;
     protected static ExtentHtmlReporter extentHtmlReporter;
 
     @BeforeTest
@@ -35,11 +35,11 @@ public class TestBaseFinal {
         if (result.getStatus() == ITestResult.FAILURE) {
 
             String screenshotLocation = ReusableMethods.getScreenshot(result.getName());
-            extendTest.fail(result.getName());
-            extendTest.addScreenCaptureFromPath(screenshotLocation);
-            extendTest.fail(result.getThrowable());
+            extentTest.fail(result.getName());
+            extentTest.addScreenCaptureFromPath(screenshotLocation);
+            extentTest.fail(result.getThrowable());
         } else if (result.getStatus() == ITestResult.SKIP) {
-            extendTest.skip("Test Case is skipped: " + result.getName());
+            extentTest.skip("Test Case is skipped: " + result.getName());
         }
         Driver.closeDriver();
     }

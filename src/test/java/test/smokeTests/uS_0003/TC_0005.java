@@ -8,9 +8,9 @@ import pages.MainPage;
 import pages.RegisterPage;
 import utilities.ConfigReader;
 import utilities.Driver;
-import utilities.uS_0003_TestBaseRapor;
+import utilities.TestBaseFinal;
 
-public class TC_0005 extends uS_0003_TestBaseRapor {
+public class TC_0005 extends TestBaseFinal {
     @Test
     public void tc_0005() throws InterruptedException {
         extentTest= extentReports.createTest("tc_0005 Register sayfası Başarılı Kayıt Mesajı testi","Register sayfasında çıkan mesajı ve Ok buttonunu test eder");

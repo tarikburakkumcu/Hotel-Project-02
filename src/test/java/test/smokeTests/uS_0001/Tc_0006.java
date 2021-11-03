@@ -24,14 +24,14 @@ public class Tc_0006 extends TestBaseFinal {
     public void tC_0006 () {
 
         mainPage = new MainPage();
-        extendTest = extentReports.createTest("TC_0006 Test For Our Rooms Part","Our Rooms Part Should Be Visible and Clickable");
+        extentTest = extentReports.createTest("TC_0006 Test For Our Rooms Part","Our Rooms Part Should Be Visible and Clickable");
         ReusableMethods.goToUrl();
-        extendTest.info("Go to URL");
+        extentTest.info("Go to URL");
         ReusableMethods.scrollTo(mainPage.ourRoomsPart);
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(),10);
         SoftAssert softAssert = new SoftAssert();
 
-        extendTest.info("Click the 6 different room options and navigate the user to the to relevant page");
+        extentTest.info("Click the 6 different room options and navigate the user to the to relevant page");
         for (int i = 0; i < mainPage.ourRoomsPartRoomNames.size(); i++) {
 
             String roomName = wait.until(ExpectedConditions.visibilityOf(mainPage.ourRoomsPartRoomNames.get(i))).getText();
@@ -40,7 +40,7 @@ public class Tc_0006 extends TestBaseFinal {
             Driver.getDriver().navigate().back();
             softAssert.assertAll();
         }
-        extendTest.pass("Rooms options are visible, clickable and navigate the user to the right page");
+        extentTest.pass("Rooms options are visible, clickable and navigate the user to the right page");
 
     }
 }

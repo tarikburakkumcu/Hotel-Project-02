@@ -21,17 +21,17 @@ public class Tc_0008 extends TestBaseFinal {
     public void tC_0008 () {
 
         mainPage = new MainPage();
-        extendTest = extentReports.createTest("TC_0008 Test For Recent Blog Part", "Recent Blog part and elements inside it should be visible");
+        extentTest = extentReports.createTest("TC_0008 Test For Recent Blog Part", "Recent Blog part and elements inside it should be visible");
         ReusableMethods.goToUrl();
-        extendTest.info("Go to URL");
+        extentTest.info("Go to URL");
         ReusableMethods.scrollTo(mainPage.recentBlogPart);
         Assert.assertTrue(mainPage.recentBlogPart.isDisplayed(),"Test for 'Recent Blog Part' is failed!");
-        extendTest.pass("Recent Blog Part is visible");
+        extentTest.pass("Recent Blog Part is visible");
         SoftAssert softAssert = new SoftAssert();
         for (int i = 0; i < mainPage.recentBlogPartBlogs.size(); i++) {
             softAssert.assertTrue(mainPage.recentBlogPartBlogs.get(i).isDisplayed(),"Test for 'Elements in The Recent Blog Part' is failed!");
             softAssert.assertAll();
-            extendTest.pass((i+1) +". element in the recent blog part is visible");
+            extentTest.pass((i+1) +". element in the recent blog part is visible");
         }
     }
 }

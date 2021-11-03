@@ -22,11 +22,11 @@ public class Tc_0005 extends TestBaseFinal {
     public void tC_0005 ()  {
 
         mainPage = new MainPage();
-        extendTest = extentReports.createTest("TC_0005 Test For Welcome to Our Hotel Part","Welcome to Our Hotel part should be visible");
+        extentTest = extentReports.createTest("TC_0005 Test For Welcome to Our Hotel Part","Welcome to Our Hotel part should be visible");
 
         ReusableMethods.goToUrl();
         ReusableMethods.scrollTo(mainPage.welcomeToOurHotelPart);
         Assert.assertTrue(mainPage.welcomeToOurHotelPart.isDisplayed());
-        extendTest.pass("Welcome to Our Hotel part is visible");
+        extentTest.pass("Welcome to Our Hotel part is visible");
     }
 }

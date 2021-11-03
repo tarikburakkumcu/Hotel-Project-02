@@ -19,16 +19,10 @@ import java.util.Date;
 public class ReusableMethods {
 
 
-    static MainPage mainPage = new MainPage();
-    static LoginPage loginPage = new LoginPage();
-    static DefaultPage defaultPage = new DefaultPage();
-    static RegisterPage registerPage = new RegisterPage();
-
     public static void login() {
 
         MainPage mainPage = new MainPage();
         LoginPage loginPage = new LoginPage();
-        DefaultPage defaultPage = new DefaultPage();
 
             goToUrl();
 
@@ -57,6 +51,7 @@ public class ReusableMethods {
 
 
         public static void hotelRooms () {
+            DefaultPage defaultPage = new DefaultPage();
             defaultPage.hotelManagementLinki.click();
             defaultPage.hotelRoomsLinki.click();
         }

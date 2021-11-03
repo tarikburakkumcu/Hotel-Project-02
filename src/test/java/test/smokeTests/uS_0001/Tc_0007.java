@@ -20,23 +20,23 @@ public class Tc_0007 extends TestBaseFinal {
     public void tC_0007 ()  {
 
         mainPage = new MainPage();
-        extendTest = extentReports.createTest("TC_0007 Test For Customer Comments Part","Customer Comments part should be visible and slider buttons should be working");
+        extentTest = extentReports.createTest("TC_0007 Test For Customer Comments Part","Customer Comments part should be visible and slider buttons should be working");
         ReusableMethods.goToUrl();
-        extendTest.info("Go to URL");
+        extentTest.info("Go to URL");
         ReusableMethods.scrollTo(mainPage.customerCommentPart);
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(mainPage.customerCommentPart.isDisplayed(),"Test for 'Customer Comment Part' is failed!");
-        extendTest.pass("Customer comment part is visible");
+        extentTest.pass("Customer comment part is visible");
         String previousComment = "";
 
         for (int i = 0; i < mainPage.customerCommentSliderButtons.size(); i++) {
             mainPage.customerCommentSliderButtons.get(i).click();
-            extendTest.info("Click " + (i+1) +". slider button");
+            extentTest.info("Click " + (i+1) +". slider button");
             softAssert.assertNotEquals(mainPage.activeCustomerComment.getText(),previousComment,"Test for 'Customer Comments Part Slider Buttons' is failed!");
             previousComment = mainPage.activeCustomerComment.getText();
             ReusableMethods.waitFor(1);
             softAssert.assertAll();
-            extendTest.pass((i+1) +". slider button is working");
+            extentTest.pass((i+1) +". slider button is working");
         }
 
 

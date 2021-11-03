@@ -19,9 +19,9 @@ public class Tc_0010 extends TestBaseFinal {
     public void tC_0010 () {
 
         mainPage = new MainPage();
-        extendTest = extentReports.createTest("TC_0009 Test For Instagram Part", "Instagram part should be visible and elements inside it should be clickable");
+        extentTest = extentReports.createTest("TC_0009 Test For Instagram Part", "Instagram part should be visible and elements inside it should be clickable");
         ReusableMethods.goToUrl();
-        extendTest.info("Go to URL");
+        extentTest.info("Go to URL");
         ReusableMethods.scrollTo(mainPage.footerPart);
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(mainPage.footerPartConcortHotel.isDisplayed(),"Test for visibility of 'Concort Hotel Part' is failed!");
@@ -29,6 +29,6 @@ public class Tc_0010 extends TestBaseFinal {
         softAssert.assertTrue(mainPage.footerPartPrivacy.isDisplayed(),"Test for visibility of 'Privacy Part' is failed!");
         softAssert.assertTrue(mainPage.footerPartHaveAQuestions.isDisplayed(),"Test for visibility of 'Have a Questions? Part' is failed!");
         softAssert.assertAll();
-        extendTest.pass("Concort Hotel, Useful Links, Privacy and Have a Questions? elements in the footer part are visible");
+        extentTest.pass("Concort Hotel, Useful Links, Privacy and Have a Questions? elements in the footer part are visible");
     }
 }

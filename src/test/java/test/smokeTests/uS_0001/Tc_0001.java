@@ -25,24 +25,24 @@ public class Tc_0001 extends TestBaseFinal {
     public void tC_0001 (){
 
         mainPage = new MainPage();
-        extendTest = extentReports.createTest("TC_0001 Test For Elements At Navigation Part","Elements At The Navigation Part Should Be Visible");
+        extentTest = extentReports.createTest("TC_0001 Test For Elements At Navigation Part","Elements At The Navigation Part Should Be Visible");
         ReusableMethods.goToUrl();
-        extendTest.info("Go to URL");
+        extentTest.info("Go to URL");
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(mainPage.homeLink.isDisplayed(),"Test for visibility of 'Home Button' is failed!");
-        extendTest.pass("Home link is visible");
+        extentTest.pass("Home link is visible");
         softAssert.assertTrue(mainPage.roomsLink.isDisplayed(),"Test for visibility of 'Rooms Button' is failed!");
-        extendTest.pass("Rooms link is visible");
+        extentTest.pass("Rooms link is visible");
         softAssert.assertTrue(mainPage.restaurantLink.isDisplayed(),"Test for visibility of 'Restaurant Button' is failed!");
-        extendTest.pass("Restaurant link is visible");
+        extentTest.pass("Restaurant link is visible");
         softAssert.assertTrue(mainPage.aboutLink.isDisplayed(),"Test for visibility of 'About Button' is failed!");
-        extendTest.pass("About link is visible");
+        extentTest.pass("About link is visible");
         softAssert.assertTrue(mainPage.blogLink.isDisplayed(),"Test for visibility of 'Blog Button' is failed!");
-        extendTest.pass("Blog link is visible");
+        extentTest.pass("Blog link is visible");
         softAssert.assertTrue(mainPage.contactLink.isDisplayed(),"Test for visibility of 'Contact Button' is failed!");
-        extendTest.pass("Contact link is visible");
+        extentTest.pass("Contact link is visible");
         softAssert.assertTrue(mainPage.loginLink.isDisplayed(),"Test for visibility of 'Log in Button' is failed!");
-        extendTest.pass("Login link is visible");
+        extentTest.pass("Login link is visible");
         softAssert.assertAll();
     }
 }

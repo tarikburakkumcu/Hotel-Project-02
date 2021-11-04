@@ -14,7 +14,8 @@ import utilities.ReusableMethods;
 
 public class TC_0005 {
 
-    //Menüden "Hotel Management'' ardından "Hotel Rooms''butonuna tıklanılabilmeli ve Çıkan sayfada "LIST OF HOTELROOMS" yazısı görülmeli
+//"properties" bölümünde "Code" ve "Value" bölümlerinde
+//manuel deger girerek update edilen degerlerin silinmesi
 //1) https://qa-environment.concorthotel.com URL'ine gidilir.
 //2) Navbar'da bulunan Login butonuna tiklanir.
 //3) "Username" butonuna geçerli bir username girilir
@@ -26,7 +27,7 @@ public class TC_0005 {
 
     @Test
     public void test1() throws InterruptedException {
-        reusableMethods.login();
+        ReusableMethods.login();
 //6) "Hotel Management" menüsüne tıklanır
 //7) "Hotel Rooms''butonuna tıklanır
 //8) Çıkan sayfada "LIST OF HOTELROOMS" yazısı görüldüğünü kontrol edilir
@@ -35,7 +36,7 @@ public class TC_0005 {
 //10) "Edit Hotelroom" bölümünde "General Data", "Hotelroom Data bölümünde "Hotel"
         // dropdown butonundan random bir hotel seçilir
         defaultPage.listOfHotelRoomsDetailsButon.click();
-//10) "Edit Hotelroom" bölümünde "Properties" bölümünde "Add property" bölümünde "Tip" dropdown sekmesinde  3. sıradaki sekmeyi seçilir
+//11) "Edit Hotelroom" bölümünde "Properties" bölümünde "Add property" bölümünde "Tip" dropdown sekmesinde  3. sıradaki sekmeyi seçilir
         HotelRoomPage hotelRoomPage=new HotelRoomPage();
         hotelRoomPage.editHotelRoomPropertiesButton.click();
         Thread.sleep(3000);
@@ -44,24 +45,28 @@ public class TC_0005 {
         WebElement dropdown2 = Driver.getDriver().findElement(By.id("lkpBarcodeTypes"));
         Select select = new Select(dropdown2);
         select.selectByVisibleText("room prop1");
-        //11) "Code" bölümünde TestCode_01 yazılır
+//12) "Code" bölümünde TestCode_01 yazılır
         hotelRoomPage.editHotelRoomAddPropertyCode.sendKeys(ConfigReader.getProperty("editHotelRoomAddPropertyCode"));
-//12) "Value" dölümüne TestValue_01 yazılır
+//13) "Value" dölümüne TestValue_01 yazılır
         hotelRoomPage.editHotelRoomAddPropertyValue.sendKeys(ConfigReader.getProperty("editHotelRoomAddPropertyValue"));
-//13) "save" butonu tıklanır
+//14) "save" butonu tıklanır
         Thread.sleep(2000);
         hotelRoomPage.editHotelRoomAddPropertySaveButton.click();
         Thread.sleep(3000);
-//14) "Delete Hotelroom" bolumunde "DELETE" butonunu tiklayiniz
+
+//15) "value added" yazisinin altindaki ok butonutu tiklayiniz
+        hotelRoomPage.editHotelRoomAddPropertyValueAddedOkButton.click();
+
+//16) "Delete Hotelroom" bolumunde "DELETE" butonunu tiklayiniz
         hotelRoomPage.editHotelRoomPropertiesDeleteButton.click();
         Thread.sleep(2000);
-//15) "Would you like to continue?" yazisinin altindaki "OK" butonunu tiklayiniz
+//17) "Would you like to continue?" yazisinin altindaki "OK" butonunu tiklayiniz
         hotelRoomPage.editHotelRoomPropertiesDeleteOkButton.click();
-//22) "Error: Couldn't delete room : please delete reservations for this room first"
+//18) "Error: Couldn't delete room : please delete reservations for this room first"
 //        //yazisinin altindaki "OK" butonunu tiklayiniz
         Thread.sleep(2000);
         hotelRoomPage.editHotelRoomPropertiesErrorOkButton.click();
 //        //not bahse konu room'a ait rezervasyonlari silmeye calissakta rezervasyonlar silinmiyor
-        Driver.closeDriver();
+        //Driver.closeDriver();
     }
     }

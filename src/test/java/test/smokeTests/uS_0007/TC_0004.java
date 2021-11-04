@@ -13,7 +13,9 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 
 public class TC_0004 {
-    //Menüden "Hotel Management'' ardından "Hotel Rooms''butonuna tıklanılabilmeli ve Çıkan sayfada "LIST OF HOTELROOMS" yazısı görülmeli
+//"properties" bölümünde "Code" ve "Value" gölümlerinde manuel deger girerek
+// update butonu tıklanarak değişikliğin "Value was updated Succesfully"
+// yazısını ekranda görülmeli ve ok butonunu tıklanabilmeli.
 //1) https://qa-environment.concorthotel.com URL'ine gidilir.
 //2) Navbar'da bulunan Login butonuna tiklanir.
 //3) "Username" butonuna geçerli bir username girilir
@@ -34,7 +36,7 @@ public class TC_0004 {
 //10) "Edit Hotelroom" bölümünde "General Data", "Hotelroom Data bölümünde "Hotel"
         // dropdown butonundan random bir hotel seçilir
         defaultPage.listOfHotelRoomsDetailsButon.click();
-//10) "Edit Hotelroom" bölümünde "Properties" bölümünde "Add property" bölümünde "Tip" dropdown sekmesinde  3. sıradaki sekmeyi seçilir
+//11) "Edit Hotelroom" bölümünde "Properties" bölümünde "Add property" bölümünde "Tip" dropdown'da "room prop1" sekmeyi seçilir
         HotelRoomPage hotelRoomPage=new HotelRoomPage();
         hotelRoomPage.editHotelRoomPropertiesButton.click();
         Thread.sleep(3000);
@@ -43,20 +45,18 @@ public class TC_0004 {
         WebElement dropdown2=Driver.getDriver().findElement(By.id("lkpBarcodeTypes"));
         Select select=new Select(dropdown2);
         select.selectByVisibleText("room prop1");
- //11) "Code" bölümünde TestCode_01 yazılır
+ //12) "Code" bölümünde TestCode_01 yazılır
         hotelRoomPage.editHotelRoomAddPropertyCode.sendKeys(ConfigReader.getProperty("editHotelRoomAddPropertyCode"));
-//12) "Value" dölümüne TestValue_01 yazılır
+//13) "Value" dölümüne TestValue_01 yazılır
         hotelRoomPage.editHotelRoomAddPropertyValue.sendKeys(ConfigReader.getProperty("editHotelRoomAddPropertyValue"));
-//13) "save" butonu tıklanır
+//14) "save" butonu tıklanır
         Thread.sleep(5000);
         hotelRoomPage.editHotelRoomAddPropertySaveButton.click();
         hotelRoomPage.editHotelRoomAddPropertySaveButton.click();
         Thread.sleep(2000);
-        //defaultPage.getEditHotelRoomAddPropertyValueAddedOkButton.click();
-        Actions actions1=new Actions(Driver.getDriver());
-        actions.sendKeys(Keys.PAGE_DOWN).perform();
-        //Thread.sleep(2000);
+        hotelRoomPage.editHotelRoomAddPropertyValueAddedOkButton.click();
+
         //not=Add Ok Butonu bazen cikiyor bazen cikmiyor
-        Driver.closeDriver();
+        //Driver.closeDriver();
 }
 }

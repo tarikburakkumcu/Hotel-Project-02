@@ -5,9 +5,9 @@ import pages.LoginPage;
 import pages.MainPage;
 import utilities.ConfigReader;
 import utilities.Driver;
-import utilities.uS_0003_TestBaseRapor;
+import utilities.TestBaseFinal;
 
-public class TC_0002 extends uS_0003_TestBaseRapor {
+public class TC_0002 extends TestBaseFinal {
     @Test
     public void tc_0002(){
         extentTest= extentReports.createTest("tc_0002 Login sayfasındaki creat a new account butonu testi","creat a new account butonunun çalıdığını test eder");

@@ -6,9 +6,9 @@ import pages.MainPage;
 import pages.RegisterPage;
 import utilities.ConfigReader;
 import utilities.Driver;
-import utilities.uS_0003_TestBaseRapor;
+import utilities.TestBaseFinal;
 
-public class TC_0003 extends uS_0003_TestBaseRapor {
+public class TC_0003 extends TestBaseFinal {
     @Test
     public void tc_0003() throws InterruptedException {
         extentTest= extentReports.createTest("tc_0003 Register sayfası bilgi girişi testi","Register sayfasındaki ilgili yerlere yeni kayıt bilgilerinin girşini test eder");

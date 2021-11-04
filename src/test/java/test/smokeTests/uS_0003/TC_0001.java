@@ -4,9 +4,9 @@ import org.testng.annotations.Test;
 import pages.MainPage;
 import utilities.ConfigReader;
 import utilities.Driver;
-import utilities.uS_0003_TestBaseRapor;
+import utilities.TestBaseFinal;
 
-public class TC_0001 extends uS_0003_TestBaseRapor {
+public class TC_0001 extends TestBaseFinal {
     @Test
     public void tc_0001(){
         extentTest= extentReports.createTest("tc_0001 Anasayfadan Login sayfasına geçiş testi","login linkinin çalıdığını test eder");

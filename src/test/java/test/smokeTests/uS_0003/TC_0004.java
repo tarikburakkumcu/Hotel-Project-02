@@ -6,9 +6,9 @@ import pages.MainPage;
 import pages.RegisterPage;
 import utilities.ConfigReader;
 import utilities.Driver;
-import utilities.uS_0003_TestBaseRapor;
+import utilities.TestBaseFinal;
 
-public class TC_0004 extends uS_0003_TestBaseRapor {
+public class TC_0004 extends TestBaseFinal {
     @Test
     public void tc_0004() throws InterruptedException {
         extentTest= extentReports.createTest("tc_0004 Register sayfası Save buttonu testi","Register sayfasına Save Buttonun çalıştığını test eder");

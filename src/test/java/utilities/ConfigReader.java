@@ -7,7 +7,7 @@ import java.util.Properties;
 
 public class ConfigReader {
 
-    static Properties properties;
+    static Properties properties;  // properties classindan bir obje olusturduk.
 
     static {
 
@@ -21,7 +21,6 @@ public class ConfigReader {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     public static String getProperty (String key){

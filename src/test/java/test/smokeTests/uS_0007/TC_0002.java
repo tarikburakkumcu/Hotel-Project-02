@@ -18,7 +18,10 @@ import utilities.ReusableMethods;
 import java.lang.ref.Cleaner;
 
 public class TC_0002 {
-//Menüden "Hotel Management'' ardından "Hotel Rooms''butonuna tıklanılabilmeli ve Çıkan sayfada "LIST OF HOTELROOMS" yazısı görülmeli
+//Edit hotelroom bölümünde "General Data",
+// "Hotelroom Data bölümünde "Hotel","Code","Name","Locatıon",
+// "Description","Price","Room Type","Max Adult Count","Max Children Count"
+// seçenekleri güncellenip "IsAvailable" ikonu tıklanıp "Save" Butonuna Tıklanılabilmeli
 //1) https://qa-environment.concorthotel.com URL'ine gidilir.
 //2) Navbar'da bulunan Login butonuna tiklanir.
 //3) "Username" butonuna geçerli bir username girilir
@@ -37,10 +40,10 @@ public class TC_0002 {
         reusableMethods.hotelRooms();
 //9) "LIST OF HOTELROOMS" listesinin ilk satırındakı "DETAILS" butonuna tıklanır (çıkan sayfada "Edit Hotelroom" yazısı görülmeli)
 //10) "Edit Hotelroom" bölümünde "General Data", "Hotelroom Data bölümünde "Hotel"
-        // dropdown butonundan random bir hotel seçilir
+        // dropdown butonundan 1.siradaki hotel seçilir
         DefaultPage defaultPage=new DefaultPage();
         defaultPage.listOfHotelRoomsDetailsButon.click();
-//11) "code" butonundan randon deger girilir
+//11) "code" butonundan "TestCode_01" girilir
         Thread.sleep(3000);
         HotelRoomPage hotelRoomPage=new HotelRoomPage();
         hotelRoomPage.editHotelRoomCode.clear();
@@ -48,30 +51,30 @@ public class TC_0002 {
         //Actions actions=new Actions(Driver.getDriver());actions.
                 //sendKeys(Keys.TAB).
                 //sendKeys(ConfigReader.getProperty("editHotelRoomCode")).
-//12) "Name" butonundan randon deger girilir
+//12) "Name" butonundan "TestName_01" girilir
         hotelRoomPage.editHotelRoomName.clear();
         hotelRoomPage.editHotelRoomName.sendKeys(ConfigReader.getProperty("editHotelRoomName"));
                 //sendKeys(Keys.TAB).
                 //sendKeys(ConfigReader.getProperty("editHotelRoomName")).
-//13) "Location" butonundan randon deger girilir
+//13) "Location" butonundan "TestCountry_01" girilir
         hotelRoomPage.editHotelRoomLocation.clear();
         hotelRoomPage.editHotelRoomLocation.sendKeys(ConfigReader.getProperty("editHotelRoomLocation"));
                 //sendKeys(Keys.TAB).
                 //sendKeys(ConfigReader.getProperty("editHotelRoomLocation")).
-//14) "Destription" bölümüne "very nice hotel" yazılır
+//14) "Destription" bölümüne "TestText_01" yazılır
         hotelRoomPage.editHotelRoomDescription.clear();
         hotelRoomPage.editHotelRoomDescription.sendKeys(ConfigReader.getProperty("editHotelRoomDescription"));
-//15) "Price" 400 girilir
+//15) "Price" 500 girilir
         hotelRoomPage.editHotelRoomPrice.clear();
         hotelRoomPage.editHotelRoomPrice.sendKeys(ConfigReader.getProperty("editHotelRoomPrice"));
-//16) Room type dropdown butonundan random bir oda type seçilir
+//16) Room type dropdown butonundan "King" oda type seçilir
 WebElement dropdown=Driver.getDriver().findElement(By.id("IDGroupRoomType"));
         Select select=new Select(dropdown);
         select.selectByVisibleText("King");
-//17) "Max Adult Count" bölümü random değiştirerek doldurulur
+//17) "Max Adult Count" bölümü "TestMAC_01" yazılır
         hotelRoomPage.editHotelRoomMaxAdultCount.clear();
         hotelRoomPage.editHotelRoomMaxAdultCount.sendKeys(ConfigReader.getProperty("editHotelRoomMaxAdultCount"));
-//18) "Max Children count" bölmümü random değiştirerek doldurulur
+//18) "Max Children count" bölümü "TestMCC_01" yazılır
         hotelRoomPage.editHotelRoomMaxChildrenCount.clear();
         hotelRoomPage.editHotelRoomMaxChildrenCount.sendKeys(ConfigReader.getProperty("editHotelRoomMaxChildrenCount"));
 //19) save butonunu tıklayınır
@@ -80,7 +83,7 @@ WebElement dropdown=Driver.getDriver().findElement(By.id("IDGroupRoomType"));
         Thread.sleep(2000);
         hotelRoomPage.editHotelRoomSaveButton.click();
         Thread.sleep(2000);
-//iptal 20) "HotelRoom was updated successfully" yazısının ekranda çıktığını görülür
+
 //20) "HotelRoom was updated successfully" yazısını altındakı "OK" butonuna basılır
         hotelRoomPage.editHotelRoomUpdatedButton.click();
         Thread.sleep(2000);

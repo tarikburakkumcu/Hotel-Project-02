@@ -30,5 +30,6 @@ public class Tc_0010 extends TestBaseFinal {
         softAssert.assertTrue(mainPage.footerPartHaveAQuestions.isDisplayed(),"Test for visibility of 'Have a Questions? Part' is failed!");
         softAssert.assertAll();
         extentTest.pass("Concort Hotel, Useful Links, Privacy and Have a Questions? elements in the footer part are visible");
+        //Oguzhan
     }
 }

@@ -37,7 +37,6 @@ public class TC_0002 extends TestBaseFinal {
         extentTest.info("hotel list linkine tıklandı");
         //"Add Hotel" Buttonuna tıklayın
         defaultPage.addHotelLink.click();
-
         extentTest.info(" addHotel  linkine tıklandı");
 
         defaultPage.addHotelCodeKutusu.sendKeys("1453");
@@ -60,6 +59,6 @@ public class TC_0002 extends TestBaseFinal {
                 sendKeys("05514531453").
                 sendKeys(Keys.TAB).
                 sendKeys("fatih1453@gmail.com").perform();
-
+        extentTest.info("Yönetici eklenecek otel name,adress,phone ve mail bilgileri girdi");
     }
 }

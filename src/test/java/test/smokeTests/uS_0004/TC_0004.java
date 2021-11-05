@@ -29,15 +29,20 @@ public class TC_0004 extends TestBaseFinal {
         "Password" butonuna geçerli bir password girin
         "Login" Butonuna tıklayın
         */
-        reusableMethods.login();
+        extentTest= extentReports.createTest("tc_0001 Anasayfadan Login sayfasına gider, username ve password girer ve login linkine tıklar"," username, pasword ile siteye giriş yapıldıgını test eder");
 
+        reusableMethods.login();
+        extentTest.info("istenen sayfaya gidildi");
         //  "Hotel Management" menüsüne tıklayın
         defaultPage.hotelManagementLinki.click();
+        extentTest.info("hotel management linkine tıklandı");
         // "Hotel List" menüsüne tıklayın
         defaultPage.hotelListLink.click();
+        extentTest.info("hotel list linkine tıklandı");
         //"Add Hotel" Buttonuna tıklayın
         defaultPage.addHotelLink.click();
-        //"Code" kutucuğuna tıklayıp bir Kod giriniz
+        extentTest.info(" addHotel  linkine tıklandı");
+
         defaultPage.addHotelCodeKutusu.sendKeys("1453");
 
         /*
@@ -58,26 +63,28 @@ public class TC_0004 extends TestBaseFinal {
                 sendKeys("05514531453").
                 sendKeys(Keys.TAB).
                 sendKeys("fatih1453@gmail.com").perform();
+        extentTest.info("Yönetici eklenecek otel name,adress,phone ve mail bilgileri girdi");
 
         // "idGroup" dropdown butonuna tıklayıp Grup seçiniz
+
         Select select = new Select(defaultPage.idGroupHotelEkle);
         select.selectByVisibleText("Hotel Type2");
-
+        extentTest.info("Yönetici olarak otel tipi konusunda secim yapıldı");
         Thread.sleep(3000);
         //"Save" butonuna tıklayın
         defaultPage.addHotelSaveButonu.click();
+        extentTest.info("Otel kayıt butonuna tıklandı");
 
         Thread.sleep(3000);
-
 
         String addHotelExpectedAlertYazisi="Hotel was inserted successfully";
         String addHotelActualAlertYazisi= Driver.getDriver().findElement(By.xpath("//div[@class='bootbox-body']")).getText();
 
         Assert.assertEquals(addHotelActualAlertYazisi,addHotelExpectedAlertYazisi,"unique bir add Hotel kaydi yapilamamistir");
-
-
+        extentTest.info("Hotel was inserted successfully yazısının görünürlüğü test edildi");
 
         defaultPage.okButonu.click();
+        extentTest.info("Ok butonuna tıklandı");
 
         Thread.sleep(5000);
         Actions actions1=new Actions(Driver.getDriver());
@@ -86,7 +93,8 @@ public class TC_0004 extends TestBaseFinal {
         Thread.sleep(3000);
 
         //otel list linkini tıklayın
-        defaultPage.hotelListLink.click();
 
+        defaultPage.hotelListLink.click();
+        extentTest.info("Hotel List  menüsüne tıklandı");
     }
 }

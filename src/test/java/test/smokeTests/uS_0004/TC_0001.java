@@ -33,7 +33,6 @@ public class TC_0001 extends TestBaseFinal {
         extentTest.info("hotel list linkine tıklandı");
        //"Add Hotel" Buttonuna tıklayın
        defaultPage.addHotelLink.click();
-
         extentTest.info(" addHotel  linkine tıklandı");
 
 

@@ -21,6 +21,8 @@ public class Tc_0001 extends TestBaseFinal {
         extentTest.info("Sayfaya gidip Login yapıldı");
         Assert.assertTrue(defaultPage.listOfUsersText.isDisplayed());
         extentTest.pass("ListOfUsers yazısı görüldü.");
+        Driver.closeDriver();
+
 
     }
 }

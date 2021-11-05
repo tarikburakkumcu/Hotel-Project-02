@@ -5,20 +5,25 @@ import org.testng.annotations.Test;
 import pages.DefaultPage;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseFinal;
 
-public class Tc_0002 {
+public class Tc_0002 extends TestBaseFinal {
 
-    ReusableMethods reusableMethods=new ReusableMethods();
-    DefaultPage defaultPage=new DefaultPage();
 
+
+    //2) "Hotel Management" butonuna tıklanıp "Hotel Rooms" butonuna tıklanmalı "LIST OF HOTELROOMS" yazısının görülebilir olmalı
     @Test
     public void tC_0002(){
+        DefaultPage defaultPage=new DefaultPage();
+        extentTest= extentReports.createTest("tC_0002 Login sayfasından Hotel Rooms gecis testi","Hotel Rooms butonunun calistigini test eder. ");
 
-        //2) "Hotel Management" butonuna tıklanıp "Hotel Rooms" butonuna tıklanmalı "LIST OF HOTELROOMS" yazısının görülebilir olmalı
 
-        reusableMethods.login();
-        reusableMethods.hotelRooms();
+        ReusableMethods.login();
+        extentTest.info("Sayfaya gidip Login yapıldı");
+        ReusableMethods.hotelRooms();
+        extentTest.info("HotelRooms sayfasına gidildi");
         Assert.assertTrue(defaultPage.listOfHotelRooms.isDisplayed());
+        extentTest.pass("ListOfHotelRooms yazısının görüldü");
         Driver.closeDriver();
     }
 }

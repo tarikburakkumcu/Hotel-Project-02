@@ -3,8 +3,9 @@ package test.smokeTests.uS_0004;
 import org.testng.annotations.Test;
 import pages.DefaultPage;
 import utilities.ReusableMethods;
+import utilities.TestBaseFinal;
 
-public class TC_0001 {
+public class TC_0001 extends TestBaseFinal {
 
     ReusableMethods reusableMethods = new ReusableMethods();
     DefaultPage defaultPage=new DefaultPage();

@@ -10,8 +10,9 @@ import org.testng.annotations.Test;
 import pages.DefaultPage;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseFinal;
 
-public class TC_0005 {
+public class TC_0005 extends TestBaseFinal {
 
     ReusableMethods reusableMethods = new ReusableMethods();
     DefaultPage defaultPage = new DefaultPage();

@@ -12,8 +12,9 @@ import pages.DefaultPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseFinal;
 
-public class TC_0004 {
+public class TC_0004 extends TestBaseFinal {
 
 
     ReusableMethods reusableMethods = new ReusableMethods();

@@ -7,8 +7,9 @@ import org.testng.annotations.Test;
 import pages.DefaultPage;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseFinal;
 
-public class TC_0002 {
+public class TC_0002 extends TestBaseFinal {
 
     ReusableMethods reusableMethods = new ReusableMethods();
     DefaultPage defaultPage=new DefaultPage();

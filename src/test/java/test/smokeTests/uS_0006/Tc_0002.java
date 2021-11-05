@@ -24,6 +24,6 @@ public class Tc_0002 extends TestBaseFinal {
         extentTest.info("HotelRooms sayfasına gidildi");
         Assert.assertTrue(defaultPage.listOfHotelRooms.isDisplayed());
         extentTest.pass("ListOfHotelRooms yazısının görüldü");
-        Driver.closeDriver();
+
     }
 }

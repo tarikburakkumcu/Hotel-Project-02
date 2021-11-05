@@ -14,10 +14,11 @@ import pages.MainPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseFinal;
 
 import java.lang.ref.Cleaner;
 
-public class TC_0002 {
+public class TC_0002 extends TestBaseFinal {
 //Edit hotelroom bölümünde "General Data",
 // "Hotelroom Data bölümünde "Hotel","Code","Name","Locatıon",
 // "Description","Price","Room Type","Max Adult Count","Max Children Count"
@@ -34,6 +35,7 @@ public class TC_0002 {
     @Test
     public void test1() throws InterruptedException {
         reusableMethods.login();
+        extentTest= extentReports.createTest("TC_0002 Hotelrooms sayfasının bölümlerının güncelleme testi ","Hotelrooms sayfasının güncellenmesini test eder");
 //6) "Hotel Management" menüsüne tıklanır
 //7) "Hotel Rooms''butonuna tıklanır
 //8) Çıkan sayfada "LIST OF HOTELROOMS" yazısı görüldüğünü kontrol edilir
@@ -43,46 +45,56 @@ public class TC_0002 {
         // dropdown butonundan 1.siradaki hotel seçilir
         DefaultPage defaultPage=new DefaultPage();
         defaultPage.listOfHotelRoomsDetailsButon.click();
+        extentTest.info("LIST OF HOTELROOMS sayfası açıldı");
 //11) "code" butonundan "TestCode_01" girilir
         Thread.sleep(3000);
         HotelRoomPage hotelRoomPage=new HotelRoomPage();
         hotelRoomPage.editHotelRoomCode.clear();
         hotelRoomPage.editHotelRoomCode.sendKeys(ConfigReader.getProperty("editHotelRoomCode"));
+        extentTest.info("code butonundan TestCode_01 girildi");
         //Actions actions=new Actions(Driver.getDriver());actions.
                 //sendKeys(Keys.TAB).
                 //sendKeys(ConfigReader.getProperty("editHotelRoomCode")).
 //12) "Name" butonundan "TestName_01" girilir
         hotelRoomPage.editHotelRoomName.clear();
         hotelRoomPage.editHotelRoomName.sendKeys(ConfigReader.getProperty("editHotelRoomName"));
+        extentTest.info("Name butonundan TestName_01 girildi");
                 //sendKeys(Keys.TAB).
                 //sendKeys(ConfigReader.getProperty("editHotelRoomName")).
 //13) "Location" butonundan "TestCountry_01" girilir
         hotelRoomPage.editHotelRoomLocation.clear();
         hotelRoomPage.editHotelRoomLocation.sendKeys(ConfigReader.getProperty("editHotelRoomLocation"));
+        extentTest.info("Location butonundan TestCountry_01 girildi");
                 //sendKeys(Keys.TAB).
                 //sendKeys(ConfigReader.getProperty("editHotelRoomLocation")).
 //14) "Destription" bölümüne "TestText_01" yazılır
         hotelRoomPage.editHotelRoomDescription.clear();
         hotelRoomPage.editHotelRoomDescription.sendKeys(ConfigReader.getProperty("editHotelRoomDescription"));
+        extentTest.info("Destription bölümüne TestText_01 girildi");
 //15) "Price" 500 girilir
         hotelRoomPage.editHotelRoomPrice.clear();
         hotelRoomPage.editHotelRoomPrice.sendKeys(ConfigReader.getProperty("editHotelRoomPrice"));
+        extentTest.info("Price 500 girildi");
 //16) Room type dropdown butonundan "King" oda type seçilir
 WebElement dropdown=Driver.getDriver().findElement(By.id("IDGroupRoomType"));
         Select select=new Select(dropdown);
         select.selectByVisibleText("King");
+        extentTest.info("Room type dropdown butonundan King oda type seçildi");
 //17) "Max Adult Count" bölümü "TestMAC_01" yazılır
         hotelRoomPage.editHotelRoomMaxAdultCount.clear();
         hotelRoomPage.editHotelRoomMaxAdultCount.sendKeys(ConfigReader.getProperty("editHotelRoomMaxAdultCount"));
+        extentTest.info("Max Adult Count bölümüne TestMAC_01 girildi");
 //18) "Max Children count" bölümü "TestMCC_01" yazılır
         hotelRoomPage.editHotelRoomMaxChildrenCount.clear();
         hotelRoomPage.editHotelRoomMaxChildrenCount.sendKeys(ConfigReader.getProperty("editHotelRoomMaxChildrenCount"));
+        extentTest.info("Max Children count bölmümü TestMCC_01 girildi");
 //19) save butonunu tıklayınır
         Thread.sleep(2000);
         hotelRoomPage.editHotelRoomIsAvailableButton.click();
         Thread.sleep(2000);
         hotelRoomPage.editHotelRoomSaveButton.click();
         Thread.sleep(2000);
+        extentTest.info("save butonuna tıklandi");
 
 //20) "HotelRoom was updated successfully" yazısını altındakı "OK" butonuna basılır
         hotelRoomPage.editHotelRoomUpdatedButton.click();

@@ -76,6 +76,9 @@ public class HotelRoomPage {
     @FindBy (id = "IsAvailable")
     public WebElement editHotelRoomIsAvailableButton;
 
+    @FindBy (xpath = "(//button[@class='btn btn-primary'])[1]")
+    public WebElement editHotelRoomAddPropertyValueAddedOkButton;
+
 
 
 

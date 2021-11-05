@@ -25,38 +25,38 @@ public class RegisterPage {
     @FindBy(id = "NameSurname")
     public WebElement regFullNameText;
 
-    @FindBy (id = "PhoneNo")
+     @FindBy (id = "PhoneNo")
     public WebElement regPhoneNoText;
 
-    @FindBy(id = "SSN")
+     @FindBy(id = "SSN")
     public WebElement regSSNText;
 
-    @FindBy(id = "DrivingLicense")
+     @FindBy(id = "DrivingLicense")
     public WebElement regDrivingLicenseText;
 
-    @FindBy(id = "IDCountry")
+     @FindBy(id = "IDCountry")
     public WebElement regCountryText;
 
-    @FindBy(id="IDState")
+     @FindBy(id="IDState")
     public WebElement regStateText;
 
-    @FindBy(id = "Address")
+     @FindBy(id = "Address")
     public WebElement regAddressText;
 
-    @FindBy(id = "WorkingSector")
+     @FindBy(id = "WorkingSector")
     public WebElement regWorkingSectorText;
 
-    @FindBy(id = "BirthDate")
+     @FindBy(id = "BirthDate")
     public WebElement regBirthDateText;
 
-    @FindBy(id = "btnSubmit")
+     @FindBy(id = "btnSubmit")
     public WebElement regSaveButton;
 
-    @FindBy(xpath = "(//div[text()='User Data was inserted successfully'])[2]")
-    // @FindBy(xpath = "//div[text()='this email address is already taken']")
-    public WebElement regAlertMessage;
+     @FindBy(xpath = "(//div[text()='User Data was inserted successfully'])[2]")
+   // @FindBy(xpath = "//div[text()='this email address is already taken']")
+     public WebElement regAlertMessage;
 
-    @FindBy(xpath = "//button[@class='btn btn-primary']")
+     @FindBy(xpath = "//button[@class='btn btn-primary']")
     public WebElement regOkButton;
 
 

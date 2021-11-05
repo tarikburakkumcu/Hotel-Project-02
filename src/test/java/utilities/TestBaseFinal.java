@@ -20,6 +20,13 @@ public class TestBaseFinal {
 
     @BeforeTest
     public void setUpTest(){
+    extentReports = new ExtentReports();
+    String filePath = System.getProperty("user.dir") + "/test-output/report.html";
+    extentHtmlReporter = new ExtentHtmlReporter(filePath);
+    extentReports.attachReporter(extentHtmlReporter);
+    extentReports.setSystemInfo("Environment", "QA");
+    extentReports.setSystemInfo("Browser", ConfigReader.getProperty("browser"));
+    extentHtmlReporter.config().setDocumentTitle("Concort Hotel");
         extentReports = new ExtentReports();
         String filePath = System.getProperty("user.dir") + "/test-output/report.html";
         extentHtmlReporter = new ExtentHtmlReporter(filePath);
@@ -49,3 +56,6 @@ public class TestBaseFinal {
         extentReports.flush();
     }
 }
+
+
+

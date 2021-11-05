@@ -13,7 +13,8 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 
 public class TC_0003 {
-    //Menüden "Hotel Management'' ardından "Hotel Rooms''butonuna tıklanılabilmeli ve Çıkan sayfada "LIST OF HOTELROOMS" yazısı görülmeli
+//Edit hotelroom bölümünde "General Data", "Hotelroom Data bölümünde
+// Test-2 de doldurulan ve  "Save" edilen hotel oda bilgilerinin silinmesi
 //1) https://qa-environment.concorthotel.com URL'ine gidilir.
 //2) Navbar'da bulunan Login butonuna tiklanir.
 //3) "Username" butonuna geçerli bir username girilir
@@ -87,6 +88,6 @@ public class TC_0003 {
         Thread.sleep(2000);
         hotelRoomPage.editHotelRoomErrorOkButton.click();
         //not bahse konu room'a ait rezervasyonlari silmeye calissakta rezervasyonlar silinmiyor
-        Driver.closeDriver();
+        //Driver.closeDriver();
     }
 }

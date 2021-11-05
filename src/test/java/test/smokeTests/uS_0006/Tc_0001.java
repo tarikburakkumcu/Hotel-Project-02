@@ -13,15 +13,14 @@ public class Tc_0001 extends TestBaseFinal {
 
     @Test
     public void tC_0001() {
-        DefaultPage defaultPage=new DefaultPage();
+        DefaultPage defaultPage = new DefaultPage();
 
-        extentTest= extentReports.createTest("tC_0001 Anasayfadan Login sayfasına geçiş testi","login linkinin çalıdığını test eder");
+        extentTest = extentReports.createTest("tC_0001 Anasayfadan Login sayfasına geçiş testi", "login linkinin çalıdığını test eder");
 
         ReusableMethods.login();
         extentTest.info("Sayfaya gidip Login yapıldı");
         Assert.assertTrue(defaultPage.listOfUsersText.isDisplayed());
         extentTest.pass("ListOfUsers yazısı görüldü.");
-
 
 
     }

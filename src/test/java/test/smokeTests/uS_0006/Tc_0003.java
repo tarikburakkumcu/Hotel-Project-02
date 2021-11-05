@@ -28,7 +28,7 @@ public class Tc_0003 extends TestBaseFinal {
         extentTest.info("add Hotel Room butonuna tıklandı");
         Assert.assertTrue(defaultPage.createHotelRoomText.isDisplayed());
         extentTest.pass("Create Hotelroom yazısı görüldü");
-        Driver.closeDriver();
+
 
 
     }

@@ -69,7 +69,7 @@ public class Tc_0004 extends TestBaseFinal {
         addHotelRoomPage.addHotelRoomSaveBtn.click();
         extentTest.pass("Save butonuna basıldı");
 
-        Driver.closeDriver();
+
 
 
 

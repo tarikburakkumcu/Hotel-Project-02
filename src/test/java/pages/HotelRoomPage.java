@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 import utilities.Driver;
 
 
-public class HotelRoomPage {
+public class gitHotelRoomPage {
     public HotelRoomPage() {
 
         PageFactory.initElements(Driver.getDriver(), this);

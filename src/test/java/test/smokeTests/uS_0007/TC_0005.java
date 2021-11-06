@@ -66,6 +66,7 @@ public class TC_0005 extends TestBaseFinal {
         hotelRoomPage.editHotelRoomAddPropertyValueAddedOkButton.click();
         extentTest.info("ValueAddedOk butonu tıklandı");
 //16) "Delete Hotelroom" bolumunde "DELETE" butonunu tiklayiniz
+        Thread.sleep(2000);
         hotelRoomPage.editHotelRoomPropertiesDeleteButton.click();
         Thread.sleep(2000);
         extentTest.info("Properties bölümü Delete butonu tıklandı");

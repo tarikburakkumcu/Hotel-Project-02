@@ -9,11 +9,12 @@ import pages.LoginPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseFinal;
 
 import java.nio.ByteBuffer;
 import java.util.Set;
 
-public class TC_0004 {
+public class TC_0004 extends TestBaseFinal {
     //4)"Hotel was updated successfully" Yazısı görebilmeli ve "Ok" Butonu tıklanılabilmeli
 
     DefaultPage defaultPage = new DefaultPage();

@@ -41,7 +41,7 @@ public class TestBaseFinal {
         } else if (result.getStatus() == ITestResult.SKIP) {
             extentTest.skip("Test Case is skipped: " + result.getName());
         }
-        Driver.closeDriver();
+
     }
 
     @AfterTest(alwaysRun = true)

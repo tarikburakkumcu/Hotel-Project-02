@@ -6,10 +6,11 @@ import org.testng.annotations.Test;
 import pages.DefaultPage;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseFinal;
 
 import java.util.Set;
 
-public class TC_0006 {
+public class TC_0006 extends TestBaseFinal{
 
     //6)"Ok" butonuna tıklanılabilmeli  ve otel bilgisi silinebilmeli
 

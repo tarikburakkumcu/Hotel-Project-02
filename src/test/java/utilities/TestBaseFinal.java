@@ -4,10 +4,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.*;
 
 import java.io.IOException;
 import java.util.stream.StreamSupport;
@@ -29,8 +26,8 @@ public class TestBaseFinal {
     extentHtmlReporter.config().setDocumentTitle("Concort Hotel");
     }
 
-    @AfterMethod
-    public void tearDownMethodForScreenshot(ITestResult result) throws IOException {
+   @AfterMethod
+   public void tearDownMethodForScreenshot(ITestResult result) throws IOException {
 
         if (result.getStatus() == ITestResult.FAILURE) {
 
@@ -41,12 +38,14 @@ public class TestBaseFinal {
         } else if (result.getStatus() == ITestResult.SKIP) {
             extentTest.skip("Test Case is skipped: " + result.getName());
         }
-        Driver.closeDriver();
     }
+
+
 
     @AfterTest(alwaysRun = true)
     public void tearDownTest() {
         extentReports.flush();
+        Driver.closeDriver();
     }
 }
 

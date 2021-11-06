@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 import utilities.Driver;
 
 
-public class HotelRoomPage {
+public class gitHotelRoomPage {
     public HotelRoomPage() {
 
         PageFactory.initElements(Driver.getDriver(), this);
@@ -72,6 +72,8 @@ public class HotelRoomPage {
     @FindBy   (xpath = "//button[@class='btn btn-primary']")
     public WebElement editHotelRoomPropertiesErrorOkButton;
 
+    @FindBy (xpath = "(//button[@class='btn btn-primary'])[1]")
+    public WebElement editHotelRoomAddPropertyValueAddedOkButton;
 
     @FindBy (id = "IsAvailable")
     public WebElement editHotelRoomIsAvailableButton;

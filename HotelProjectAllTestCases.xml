@@ -6,6 +6,7 @@
         <package name="test.smokeTests.uS_0002"></package>
         <package name="test.smokeTests.uS_0003"></package>
         <package name="test.smokeTests.uS_0007"></package>
+        <package name="test.smokeTests.uS_0006"></package>
     </packages>
     </test>
 </suite>

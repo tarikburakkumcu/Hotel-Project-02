@@ -12,12 +12,13 @@ import pages.LoginPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseFinal;
 
 import javax.swing.*;
 import java.security.Key;
 import java.util.Set;
 
-public class TC_0003 {
+public class TC_0003 extends TestBaseFinal {
 
     //3)"Code,Name,Adress,Phone,Email,Group" seçenekleri güncellenip "Save" Butonuna Tıklanılabilmeli
 

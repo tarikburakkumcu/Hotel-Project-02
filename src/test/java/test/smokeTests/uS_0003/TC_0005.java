@@ -24,18 +24,18 @@ public class TC_0005 extends TestBaseFinal {
         extentTest.info("Login sayfasındaki creat a new account butonuna tiklandi");
         RegisterPage registerPage=new RegisterPage();
         extentTest.info("RegisterPage sayfasına ulaşıldı");
-        registerPage.regUserNameText.sendKeys(ConfigReader.getProperty("regUserName"));
-        extentTest.info("Kullanıcı adı gönderildi");
+        Faker faker=new Faker();
+        registerPage.regUserNameText.sendKeys(faker.name().username());
+        extentTest.info("Faker clasından üretilen Kullanıcı adı gönderildi");
         registerPage.regPasswordText.sendKeys(ConfigReader.getProperty("regPassword"));
         extentTest.info("Password gönderildi");
-        Faker faker=new Faker();
         registerPage.regEmailText.sendKeys(faker.internet().emailAddress());
         extentTest.info("Faker clasından üretilen Email gönderildi");
-        registerPage.regFullNameText.sendKeys(ConfigReader.getProperty("regFullName"));
-        extentTest.info("İsim-soyisim gönderildi");
+        registerPage.regFullNameText.sendKeys(faker.name().fullName());
+        extentTest.info("Faker clasından üretilen İsim-soyisim gönderildi");
         Thread.sleep(1000);
-        registerPage.regPhoneNoText.sendKeys(ConfigReader.getProperty("regPhoneNo"));
-        extentTest.info("Telefon gönderildi");
+        registerPage.regPhoneNoText.sendKeys(faker.phoneNumber().cellPhone());
+        extentTest.info("Faker clasından üretilen Telefon gönderildi");
         Thread.sleep(1000);
         registerPage.regSSNText.sendKeys(ConfigReader.getProperty("regSSN"));
         extentTest.info("SSN gönderildi");
@@ -56,10 +56,8 @@ public class TC_0005 extends TestBaseFinal {
         registerPage.regSaveButton.click();
         extentTest.info("Save Buttonuna tiklandi");
         Thread.sleep(1000);
-
         Assert.assertTrue(registerPage.regAlertMessage.isDisplayed());
         extentTest.info("Alert içindeki başarı ile kaydedildi mesajı görüldü");
-
         registerPage.regOkButton.click();
         extentTest.info("Ok Buttonuna tiklandi");
 

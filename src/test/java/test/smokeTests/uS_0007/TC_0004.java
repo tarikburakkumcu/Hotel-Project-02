@@ -54,7 +54,7 @@ public class TC_0004 {
         hotelRoomPage.editHotelRoomAddPropertySaveButton.click();
         hotelRoomPage.editHotelRoomAddPropertySaveButton.click();
         Thread.sleep(2000);
-        hotelRoomPage.editHotelRoomAddPropertyValueAddedOkButton.click();
+        //hotelRoomPage.editHotelRoomAddPropertyValueAddedOkButton.click();
 
         //not=Add Ok Butonu bazen cikiyor bazen cikmiyor
         //Driver.closeDriver();

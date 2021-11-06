@@ -55,7 +55,7 @@ public class TC_0005 {
         Thread.sleep(3000);
 
 //15) "value added" yazisinin altindaki ok butonutu tiklayiniz
-        hotelRoomPage.editHotelRoomAddPropertyValueAddedOkButton.click();
+       // hotelRoomPage.editHotelRoomAddPropertyValueAddedOkButton.click();
 
 //16) "Delete Hotelroom" bolumunde "DELETE" butonunu tiklayiniz
         hotelRoomPage.editHotelRoomPropertiesDeleteButton.click();

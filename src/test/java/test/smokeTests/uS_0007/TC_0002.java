@@ -87,7 +87,7 @@ WebElement dropdown=Driver.getDriver().findElement(By.id("IDGroupRoomType"));
 //20) "HotelRoom was updated successfully" yazısını altındakı "OK" butonuna basılır
         hotelRoomPage.editHotelRoomUpdatedButton.click();
         Thread.sleep(2000);
-        //Driver.closeDriver();
+       //Driver.closeDriver();
 //not=save etsede ekranda yeni girilen degerler kayit edilmiyor
 
 

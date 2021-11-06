@@ -29,7 +29,7 @@ public class TC_0004 extends TestBaseFinal {
         "Password" butonuna geçerli bir password girin
         "Login" Butonuna tıklayın
         */
-        extentTest= extentReports.createTest("tc_0001 Anasayfadan Login sayfasına gider, username ve password girer ve login linkine tıklar"," username, pasword ile siteye giriş yapıldıgını test eder");
+        extentTest= extentReports.createTest("Hotel was inserted successfully yazısını görüntüler,  ok butonunu ve hotel list menüsünü tıklar"," Hotel was inserted successfully yazısının görüntüler ok butonunun  ve hotel list menüsünün tıklandıgını test eder");
 
         reusableMethods.login();
         extentTest.info("istenen sayfaya gidildi");

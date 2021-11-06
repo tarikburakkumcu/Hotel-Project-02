@@ -19,7 +19,7 @@ public class TC_0005 extends TestBaseFinal {
 
     @Test
     public void TC0005() throws InterruptedException {
-        extentTest= extentReports.createTest("tc_0001 Anasayfadan Login sayfasına gider, username ve password girer ve login linkine tıklar"," username, pasword ile siteye giriş yapıldıgını test eder");
+        extentTest= extentReports.createTest("tc_0005 Otel id bilgisi ve otel tipi girer ve search butonuna tıklar"," otel id ve otel tipi girilerek unique  giriş yapıldıgını test eder");
 
         reusableMethods.login();
         extentTest.info("istenen sayfaya gidildi");

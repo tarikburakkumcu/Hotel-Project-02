@@ -27,7 +27,7 @@ public class TC_0003 extends TestBaseFinal {
         */
 
 
-        extentTest= extentReports.createTest("tc_0001 Anasayfadan Login sayfasına gider, username ve password girer ve login linkine tıklar"," username, pasword ile siteye giriş yapıldıgını test eder");
+        extentTest= extentReports.createTest("tc_0003 Otel type (tipi) sayfasına gider ve save butonunu tıklar"," otel tipi seçildigini ve save butonuna  tıklandıgını test eder");
 
         reusableMethods.login();
         extentTest.info("istenen sayfaya gidildi");
@@ -61,6 +61,7 @@ public class TC_0003 extends TestBaseFinal {
                 sendKeys("05514531453").
                 sendKeys(Keys.TAB).
                 sendKeys("fatih1453@gmail.com").perform();
+
         extentTest.info("Yönetici eklenecek otel name,adress,phone ve mail bilgileri girdi");
 
         // "idGroup" dropdown butonuna tıklayıp Grup seçiniz

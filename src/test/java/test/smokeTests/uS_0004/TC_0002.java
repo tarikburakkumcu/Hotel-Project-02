@@ -25,7 +25,7 @@ public class TC_0002 extends TestBaseFinal {
         "Login" Butonuna tıklayın
         */
 
-        extentTest= extentReports.createTest("tc_0001 Anasayfadan Login sayfasına gider, username ve password girer ve login linkine tıklar"," username, pasword ile siteye giriş yapıldıgını test eder");
+        extentTest= extentReports.createTest("tc_0002 Yönetici eklenecek otel name,adress,phone ve mail bilgileri ilgili kutucuga girer","otel name,adress,phone ve mail bilgilerinin ilgili alana girilebildigini test eder");
 
         reusableMethods.login();
         extentTest.info("istenen sayfaya gidildi");
@@ -38,6 +38,7 @@ public class TC_0002 extends TestBaseFinal {
         //"Add Hotel" Buttonuna tıklayın
         defaultPage.addHotelLink.click();
         extentTest.info(" addHotel  linkine tıklandı");
+
 
         defaultPage.addHotelCodeKutusu.sendKeys("1453");
 
@@ -59,6 +60,7 @@ public class TC_0002 extends TestBaseFinal {
                 sendKeys("05514531453").
                 sendKeys(Keys.TAB).
                 sendKeys("fatih1453@gmail.com").perform();
+
         extentTest.info("Yönetici eklenecek otel name,adress,phone ve mail bilgileri girdi");
     }
 }

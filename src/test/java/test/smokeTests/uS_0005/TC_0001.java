@@ -9,10 +9,11 @@ import pages.MainPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseFinal;
 
 import java.util.List;
 
-public class TC_0001 {
+public class TC_0001 extends TestBaseFinal{
         ReusableMethods reusableMethods = new ReusableMethods();
         DefaultPage defaultPage = new DefaultPage();
 

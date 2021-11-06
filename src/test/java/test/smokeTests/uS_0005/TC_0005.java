@@ -7,10 +7,11 @@ import org.testng.annotations.Test;
 import pages.DefaultPage;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseFinal;
 
 import java.util.Set;
 
-public class TC_0005 {
+public class TC_0005 extends TestBaseFinal{
 
     //5)"Delete" butonuna tıklanılabilmeli "Would you like to continue?" yazısı görünürlüğü test edilmeli.
 

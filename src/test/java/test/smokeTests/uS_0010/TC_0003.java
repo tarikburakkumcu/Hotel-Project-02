@@ -14,7 +14,7 @@ public class TC_0003 extends TestBaseFinal {
     TC_0003-Us_0010 3)"Advanced Search" kismi gorunur ve altindaki fonsiyonlar kullanilabilir  olmali
      */
     @Test
-    public void test1() throws InterruptedException {
+    public void test1() {
 
         extentTest = extentReports.createTest("TC_0003 from uS_0010 ","Advanced Search kismi gorunur ve butun butonlar calisir");
 

@@ -24,6 +24,7 @@ public class TestBaseFinal {
     extentReports.setSystemInfo("Environment", "QA");
     extentReports.setSystemInfo("Browser", ConfigReader.getProperty("browser"));
     extentHtmlReporter.config().setDocumentTitle("Concort Hotel");
+
     }
 
    @AfterMethod

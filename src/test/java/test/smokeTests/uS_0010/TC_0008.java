@@ -31,7 +31,7 @@ Your Reservation Link is : here" mesajini kullanici gormeli ve "here" butonu ile
         mainPage.roomsLink.click();
 
         Thread.sleep(1000);
-        actions.sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).build().perform();
+        actions.sendKeys(Keys.ARROW_DOWN).click(us_0010_qaConcortPage.rastgeleBirBookRoomsButtonu).perform();
         Thread.sleep(1000);
         actions.click(us_0010_qaConcortPage.rastgeleBirBookRoomsButtonu).perform();
 

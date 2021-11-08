@@ -69,7 +69,7 @@ public class TC_0003 extends TestBaseFinal {
         Select select = new Select(defaultPage.idGroupHotelEkle);
         select.selectByVisibleText("Hotel Type2");
         extentTest.info("Yönetici olarak otel tipi konusunda secim yapıldı");
-        Thread.sleep(3000);
+        ReusableMethods.waitFor(1);
         //"Save" butonuna tıklayın
         defaultPage.addHotelSaveButonu.click();
         extentTest.info("Otel kayıt butonuna tıklandı");

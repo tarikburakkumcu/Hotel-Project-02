@@ -44,7 +44,7 @@ public class TC_0004 extends TestBaseFinal {
         HotelRoomPage hotelRoomPage=new HotelRoomPage();
         hotelRoomPage.editHotelRoomPropertiesButton.click();
         extentTest.info("Properties butonu tıklandı");
-        Thread.sleep(3000);
+        ReusableMethods.waitFor(1);
         Actions actions=new Actions(Driver.getDriver());
         actions.sendKeys(Keys.PAGE_DOWN).perform();
         WebElement dropdown2=Driver.getDriver().findElement(By.id("lkpBarcodeTypes"));
@@ -60,7 +60,7 @@ public class TC_0004 extends TestBaseFinal {
 //14) "save" butonu tıklanır
         Thread.sleep(2000);
         hotelRoomPage.editHotelRoomAddPropertySaveButton.click();
-        Thread.sleep(5000);
+        ReusableMethods.waitFor(1);
         extentTest.info("save butonu tıklandı");
         hotelRoomPage.editHotelRoomAddPropertyValueAddedOkButton.click();
         extentTest.info("ValueAddedOk butonu tıklandı");

@@ -7,10 +7,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.LoginPage;
 import pages.MainPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+
+import java.lang.ref.WeakReference;
 
 public class US_0010_QAConcortPage {
 
@@ -72,6 +76,9 @@ public class US_0010_QAConcortPage {
 
     @FindBy(xpath = "//a[text()='Single ']")
     public WebElement singleButton;
+
+    @FindBy(xpath = "//h3[text()='Categories']")
+    public WebElement scroll;
 
     @FindBy(xpath = "//a[text()='Double ']")
     public WebElement doubleButton;
@@ -163,6 +170,7 @@ public class US_0010_QAConcortPage {
     public void kayitKismiCheckDateler() throws InterruptedException {
         us_0010_qaConcortPage = new US_0010_QAConcortPage();
         Thread.sleep(2000);
+
 
         us_0010_qaConcortPage.checkinDate.click();
         us_0010_qaConcortPage.checkinDate.clear();

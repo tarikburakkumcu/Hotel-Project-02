@@ -70,12 +70,12 @@ public class TC_0004 extends TestBaseFinal {
         Select select = new Select(defaultPage.idGroupHotelEkle);
         select.selectByVisibleText("Hotel Type2");
         extentTest.info("Yönetici olarak otel tipi konusunda secim yapıldı");
-        Thread.sleep(3000);
+        ReusableMethods.waitFor(1);
         //"Save" butonuna tıklayın
         defaultPage.addHotelSaveButonu.click();
         extentTest.info("Otel kayıt butonuna tıklandı");
 
-        Thread.sleep(3000);
+        ReusableMethods.waitFor(1);
 
         String addHotelExpectedAlertYazisi="Hotel was inserted successfully";
         String addHotelActualAlertYazisi= Driver.getDriver().findElement(By.xpath("//div[@class='bootbox-body']")).getText();
@@ -86,11 +86,11 @@ public class TC_0004 extends TestBaseFinal {
         defaultPage.okButonu.click();
         extentTest.info("Ok butonuna tıklandı");
 
-        Thread.sleep(5000);
+        ReusableMethods.waitFor(1);
         Actions actions1=new Actions(Driver.getDriver());
         actions1.
                 sendKeys(Keys.PAGE_UP).perform();
-        Thread.sleep(3000);
+        ReusableMethods.waitFor(1);
 
         //otel list linkini tıklayın
 

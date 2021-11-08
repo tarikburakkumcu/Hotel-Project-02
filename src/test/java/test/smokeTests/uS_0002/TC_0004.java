@@ -5,6 +5,7 @@ import org.testng.asserts.SoftAssert;
 import pages.LoginPage;
 import pages.MainPage;
 import utilities.ConfigReader;
+import utilities.Driver;
 import utilities.ReusableMethods;
 
 public class TC_0004 {
@@ -22,7 +23,7 @@ public class TC_0004 {
         SoftAssert softAssert = new SoftAssert();
 
         reusableMethods.goToUrl();
-        softAssert.assertTrue(mainPage.loginLink.equals("Log in"),"Test for visibility of 'Log in Link' is failed!");
+        softAssert.assertTrue(mainPage.loginLink.getText().equals("Log in"),"Test for visibility of 'Log in Link' is failed!");
         mainPage.loginLink.click();
         softAssert.assertTrue(loginPage.usernameBox.isDisplayed(),"Test for visibility of 'Username Textbox' is failed!");
         loginPage.usernameBox.sendKeys(ConfigReader.getProperty("validUserName"));
@@ -31,7 +32,6 @@ public class TC_0004 {
         softAssert.assertTrue(loginPage.loginButton.isDisplayed(),"Test for visibility of 'Log in Button' is failed!");
         loginPage.loginButton.click();
         softAssert.assertAll();
-
 
     }
 

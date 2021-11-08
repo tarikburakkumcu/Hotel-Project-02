@@ -4,8 +4,11 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.DefaultPage;
+import pages.MainPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 import utilities.TestBaseFinal;
 
 
@@ -63,8 +66,10 @@ public class TC_0001 extends TestBaseFinal {
 
         US_0010_QAConcortPage US_0010_QAConcortPage = new US_0010_QAConcortPage();
         Actions actions = new Actions(Driver.getDriver());
-        actions.sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).perform();
 
+        MainPage mainPage = new MainPage();
+
+        ReusableMethods.scrollTo(mainPage.ourRoomsPart);
 
         US_0010_QAConcortPage.viewRoomDetails1.click();
 

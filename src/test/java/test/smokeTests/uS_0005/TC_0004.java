@@ -55,7 +55,7 @@ public class TC_0004 extends TestBaseFinal {
         extentTest.info("Save Butonuna tıklanıldı.");
 
 
-        Thread.sleep(3000);
+        ReusableMethods.waitFor(1);
         String uptadeYazisi = Driver.getDriver().findElement(By.xpath("//div[@class='bootbox-body']")).getText();
         String expectedResult ="Hotel was updated successfully";
         Assert.assertEquals(uptadeYazisi,expectedResult,"Update yazısı birbiriyle uyuşmuyor");

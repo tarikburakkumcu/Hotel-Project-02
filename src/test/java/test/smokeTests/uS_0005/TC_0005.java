@@ -51,7 +51,7 @@ public class TC_0005 extends TestBaseFinal{
         deleteButonu.click();
         extentTest.info("Delete butonuna tıklanıldı.");
 
-        Thread.sleep(3000);
+        ReusableMethods.waitFor(1);
         String uyariYazisi = Driver.getDriver().findElement(By.xpath("//div[@class='bootbox-body']")).getText();
         String expectedResult ="Would you like to continue?";
         Assert.assertEquals(expectedResult,uyariYazisi,"uyari yazisi ile uyuşmuyor");

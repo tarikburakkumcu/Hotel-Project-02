@@ -36,7 +36,7 @@ public class TC_0007 extends TestBaseFinal {
 
         Actions actions = new Actions(Driver.getDriver());
         Thread.sleep(1400);
-        actions.sendKeys(Keys.PAGE_DOWN).click(us_0010_qaConcortPage.rastgeleBirBookRoomsButtonu).perform();
+        actions.sendKeys(Keys.ARROW_DOWN).click(us_0010_qaConcortPage.rastgeleBirBookRoomsButtonu).perform();
 
         us_0010_qaConcortPage.kayitKismiCheckDateler();
         us_0010_qaConcortPage.kayitIcinKullanilanActions();

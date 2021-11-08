@@ -2,7 +2,7 @@
 <suite name="All Test">
     <test name="All Test Cases">
     <packages>
-        <package name="test.smokeTests"></package>
+        <package name=".*"></package>
     </packages>
     </test>
 </suite>

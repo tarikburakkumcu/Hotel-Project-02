@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 import pages.MainPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 import utilities.TestBaseFinal;
 
 public class TC_0004 extends TestBaseFinal {
@@ -62,9 +63,8 @@ public class TC_0004 extends TestBaseFinal {
         Actions actions = new Actions(Driver.getDriver());
         US_0010_QAConcortPage US_0010_QAConcortPage = new US_0010_QAConcortPage();
 
-        actions.sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).
-                sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).
-                sendKeys(Keys.ARROW_DOWN).perform();
+
+        ReusableMethods.scrollTo(US_0010_QAConcortPage.scroll);
 
 
         Thread.sleep(1000);

@@ -23,7 +23,7 @@ public class TC_0001 {
         SoftAssert softAssert = new SoftAssert();
 
         reusableMethods.goToUrl();
-        softAssert.assertTrue(mainPage.loginLink.equals("Log in"),"Test for visibility of 'Log in Link' is failed!");
+        softAssert.assertTrue(mainPage.loginLink.getText().equals("Log in"),"Test for visibility of 'Log in Link' is failed!");
         mainPage.loginLink.click();
 
 

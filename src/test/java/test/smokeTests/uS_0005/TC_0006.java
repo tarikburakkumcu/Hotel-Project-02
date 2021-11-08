@@ -20,11 +20,16 @@ public class TC_0006 extends TestBaseFinal{
     @Test
     public void tc_0005() throws InterruptedException {
 
-        reusableMethods.login();
-        defaultPage.hotelManagementLinki.click();
-        defaultPage.hotelListLink.click();
-        defaultPage.detailsHotelLinki.click();
 
+        extentTest= extentReports.createTest("tc_0006 Ok butonuna tıklanılıp otel bilgisi silinmeli ","Otel bilgisi silindi");
+        reusableMethods.login();
+        extentTest.info("Siteye giriş yapıldı");
+        defaultPage.hotelManagementLinki.click();
+        extentTest.info("HotelManagement'e tıklanıldı");
+        defaultPage.hotelListLink.click();
+        extentTest.info("Hotel Listte tıklanıldı");
+        defaultPage.detailsHotelLinki.click();
+        extentTest.info("Details sayfasına tıklanıldı.");
 
         System.out.println("ilk sayfanin handle değeri :" + Driver.getDriver().getWindowHandle());
         String ilkSayfaninHandleDegeri = Driver.getDriver().getWindowHandle();
@@ -43,11 +48,13 @@ public class TC_0006 extends TestBaseFinal{
 
         WebElement deleteButonu = Driver.getDriver().findElement(By.xpath("//button[@id='btnDelete']"));
         deleteButonu.click();
-
+        extentTest.info("Delete butonuna tıklanıldı.");
 
         WebElement okButonu = Driver.getDriver().findElement(By.xpath("//button[@data-bb-handler='confirm']"));
         okButonu.click();
-        Thread.sleep(5000);
+        extentTest.info("OK butonuna tıklanıldı.");
+
+
 
     }
 

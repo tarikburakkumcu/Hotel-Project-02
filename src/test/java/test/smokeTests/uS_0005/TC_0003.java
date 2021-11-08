@@ -29,12 +29,15 @@ public class TC_0003 extends TestBaseFinal {
 
     @Test
     public void tc_0003(){
-
-
+        extentTest= extentReports.createTest("tc_0003 Gereken bilgiler girilip Save edilebilmeli ","Save Butonuna tıklanıldı.");
         reusableMethods.login();
+        extentTest.info("Siteye giriş yapıldı");
         defaultPage.hotelManagementLinki.click();
+        extentTest.info("HotelManagement'e tıklanıldı");
         defaultPage.hotelListLink.click();
+        extentTest.info("Hotel Listte tıklanıldı");
         defaultPage.detailsHotelLinki.click();
+        extentTest.info("Details sayfasına tıklanıldı.");
 
 
         System.out.println("ilk sayfanin handle değeri :" + Driver.getDriver().getWindowHandle());
@@ -67,10 +70,21 @@ public class TC_0003 extends TestBaseFinal {
                 .sendKeys(Keys.TAB)
                 .sendKeys("myb6767@gmail.com").perform();
 
+        extentTest.info("Code Gönderildi");
+        extentTest.info("Name Gönderildi");
+        extentTest.info("Adress Gönderildi");
+        extentTest.info("PhoneNumber Gönderildi");
+        extentTest.info("MailAdress Gönderildi");
+
+
+
         WebElement dropDown = Driver.getDriver().findElement(By.xpath("//select[@class='form-control input-lg required'][1]"));
         Select options = new Select(dropDown);
         options.selectByVisibleText("Hotel Type1");
+        extentTest.info("Group seçildi");
+
         WebElement saveButonu = Driver.getDriver().findElement(By.xpath("//button[@class='btn green'][1]"));
+        extentTest.info("Save Butonuna tıklanıldı");
 
 
 

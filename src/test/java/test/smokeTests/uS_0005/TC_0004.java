@@ -23,10 +23,15 @@ public class TC_0004 extends TestBaseFinal {
     @Test
     public void tc_0004() throws InterruptedException {
 
+        extentTest= extentReports.createTest("tc_0004 Değişiklikler başarılı bir şekilde save edilebilmeli ","Ok Butonuna tıklanıldı.");
         reusableMethods.login();
+        extentTest.info("Siteye giriş yapıldı");
         defaultPage.hotelManagementLinki.click();
+        extentTest.info("HotelManagement'e tıklanıldı");
         defaultPage.hotelListLink.click();
+        extentTest.info("Hotel Listte tıklanıldı");
         defaultPage.detailsHotelLinki.click();
+        extentTest.info("Details sayfasına tıklanıldı.");
 
 
         System.out.println("ilk sayfanin handle değeri :" + Driver.getDriver().getWindowHandle());
@@ -47,15 +52,18 @@ public class TC_0004 extends TestBaseFinal {
 
         WebElement saveButonu = Driver.getDriver().findElement(By.xpath("//button[@class='btn green'][1]"));
         saveButonu.click();
+        extentTest.info("Save Butonuna tıklanıldı.");
+
 
         Thread.sleep(3000);
         String uptadeYazisi = Driver.getDriver().findElement(By.xpath("//div[@class='bootbox-body']")).getText();
         String expectedResult ="Hotel was updated successfully";
         Assert.assertEquals(uptadeYazisi,expectedResult,"Update yazısı birbiriyle uyuşmuyor");
+        extentTest.info("Değişiklikler Başarılı bir şekilde kayıt edildi");
 
         WebElement okButonu = Driver.getDriver().findElement(By.xpath("(//button[@type='button'])[6]"));
         okButonu.click();
-
+        extentTest.info("Ok Butonuna tıklanıldı.");
 
 
     }

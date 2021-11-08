@@ -69,7 +69,7 @@ public class DefaultPage {
     @FindBy(xpath = "//select[@id='IDGroup']")
     public WebElement idGroupHotelEkle;
 
-    @FindBy(id = "btnDelete")
+    @FindBy(xpath = "//button[@id='btnDelete']")
     public WebElement deleteButonu;
 
     @FindBy(id="btnSubmit")
@@ -84,14 +84,13 @@ public class DefaultPage {
     @FindBy(id = "txtBarcodeCode")
     public WebElement codeButonu;
 
-    @FindBy(xpath = "//input[@id='IsPaid']")
-    public WebElement generalDataIsPaid;
 
     @FindBy (xpath ="//button[@class='btn btn-primary']")
     public WebElement okButonu;
 
     @FindBy(id="txtBarcode")
     public WebElement valueButonu;
+
 
     @FindBy(xpath = "//button[@class='btn green']")
     public WebElement generalDataSaveButonu;
@@ -113,6 +112,12 @@ public class DefaultPage {
 
     @FindBy(xpath = "(//button[@class='btn green'])[2]")
     public WebElement propertiesSaveButonu;
+
+ @FindBy(xpath = "//button[@class='btn btn-primary']")
+ public WebElement propertiesSaveButonuOnay;
+
+    @FindBy   (xpath = "//button[@class='btn btn-primary']")
+    public WebElement editHotelRoomDeleteButonuOnay;
 
     @FindBy(xpath = "//input[@id='DateStart']")
     public WebElement dateStart;

@@ -11,30 +11,30 @@ public class DefaultPage {
 
     public DefaultPage() {
 
-      PageFactory.initElements(Driver.getDriver(), this);
-   }
+        PageFactory.initElements(Driver.getDriver(), this);
+    }
 
 
-   @FindBy(xpath = "//span[text()='Hotel Management']")
-   public WebElement hotelManagementLinki;
+    @FindBy(xpath = "//span[text()='Hotel Management']")
+    public WebElement hotelManagementLinki;
 
-   @FindBy(partialLinkText = "Hotel Rooms")
-   public WebElement hotelRoomsLinki;
+    @FindBy(partialLinkText = "Hotel Rooms")
+    public WebElement hotelRoomsLinki;
 
-   @FindBy(xpath = "//span[text()='List Of Hotelrooms']")
-   public WebElement listOfHotelRooms;
+    @FindBy(xpath = "//span[text()='List Of Hotelrooms']")
+    public WebElement listOfHotelRooms;
 
-   @FindBy(partialLinkText = "Hotel List")
+    @FindBy(partialLinkText = "Hotel List")
     public WebElement hotelListLink;
 
-   @FindBy(partialLinkText = "Room reservation")
+    @FindBy(partialLinkText = "Room reservation")
     public WebElement roomReservationLinki;
 
-   @FindBy(xpath = "//span[@class='caption-subject font-green-sharp bold uppercase']")
+    @FindBy(xpath = "//span[@class='caption-subject font-green-sharp bold uppercase']")
     public WebElement listOfRoomReservation;
 
-   @FindBy(xpath = "(//a[@class='btn btn-xs default'])[1]")
-   public WebElement listOfHotelRoomsDetailsButon;
+    @FindBy(xpath = "(//a[@class='btn btn-xs default'])[1]")
+    public WebElement listOfHotelRoomsDetailsButon;
 
     @FindBy(xpath = "//input[@name='ContactNameSurname']")
     public WebElement contactNameSurnameKutusu;
@@ -45,13 +45,13 @@ public class DefaultPage {
     @FindBy(xpath = "//button[@class='btn btn-sm yellow filter-submit margin-bottom']")
     public WebElement searchButonu;
 
-    @FindBy (xpath = "//span[text()='Add Hotelroom ']")
+    @FindBy(xpath = "//span[text()='Add Hotelroom ']")
     public WebElement addHotelRoomBtn;
 
     @FindBy(xpath = "//th[@class='sorting_asc']")
     public WebElement contactNameSurnameKutusuGecis;
 
-    @FindBy(xpath ="//div[@class='caption']")
+    @FindBy(xpath = "//div[@class='caption']")
     public WebElement createHotelRoomText;
 
     @FindBy(xpath = "//a[@class='btn btn-xs default']")
@@ -60,7 +60,7 @@ public class DefaultPage {
     @FindBy(xpath = "//span[text()='Add Hotel ']")
     public WebElement addHotelLink;
 
-    @FindBy(id="Code")
+    @FindBy(id = "Code")
     public WebElement addHotelCodeKutusu;
 
     @FindBy(xpath = "//div[@class='caption']")
@@ -72,36 +72,36 @@ public class DefaultPage {
     @FindBy(xpath = "//button[@id='btnDelete']")
     public WebElement deleteButonu;
 
-    @FindBy(id="btnSubmit")
+    @FindBy(id = "btnSubmit")
     public WebElement addHotelSaveButonu;
 
     @FindBy(xpath = "//select[@id='lkpBarcodeTypes']")
     public WebElement tipListesi;
 
-    @FindBy (xpath ="//div[@class='bootbox-body']")
+    @FindBy(xpath = "//div[@class='bootbox-body']")
     public WebElement hotelWasInsertedSuccessfullyYazısı;
 
     @FindBy(id = "txtBarcodeCode")
     public WebElement codeButonu;
 
 
-    @FindBy (xpath ="//button[@class='btn btn-primary']")
+    @FindBy(xpath = "//button[@class='btn btn-primary']")
     public WebElement okButonu;
 
-    @FindBy(id="txtBarcode")
+    @FindBy(id = "txtBarcode")
     public WebElement valueButonu;
 
 
     @FindBy(xpath = "//button[@class='btn green']")
     public WebElement generalDataSaveButonu;
 
-    @FindBy(xpath ="//input[@name='IDHotel']")
+    @FindBy(xpath = "//input[@name='IDHotel']")
     public WebElement otelListidCheck;
 
     @FindBy(xpath = "//a[text()='Properties']")
     public WebElement propertiesLinki;
 
-    @FindBy(xpath="//*[@class='btn btn-sm yellow filter-submit margin-bottom']")
+    @FindBy(xpath = "//*[@class='btn btn-sm yellow filter-submit margin-bottom']")
     public WebElement hotelSearchButton;
 
     @FindBy(xpath = "//select[@class='form-control form-filter input-sm']")
@@ -121,4 +121,7 @@ public class DefaultPage {
 
     @FindBy(xpath = "//input[@id='DateStart']")
     public WebElement dateStart;
+
+    @FindBy(xpath = "//span[text()='Add Room Reservation ']")
+    public WebElement addRoomReservationButonu;
 }

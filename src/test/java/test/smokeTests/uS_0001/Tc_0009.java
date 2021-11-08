@@ -30,7 +30,6 @@ public class Tc_0009 extends TestBaseFinal {
         for (int i = 0; i < mainPage.instagramPartPictures.size(); i++) {
             String nameOfPictures= mainPage.instagramPartPictures.get(i).getAttribute("style");
             nameOfPictures = nameOfPictures.substring(nameOfPictures.indexOf("/"),nameOfPictures.indexOf(")")-1);
-            System.out.println(nameOfPictures);
             mainPage.instagramPartPictures.get(i).click();
             extentTest.info("Click " + (i+1) +". picture");
             ReusableMethods.waitFor(1);

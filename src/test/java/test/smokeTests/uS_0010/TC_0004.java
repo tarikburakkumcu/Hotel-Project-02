@@ -7,13 +7,18 @@ import org.testng.annotations.Test;
 import pages.MainPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.TestBaseFinal;
 
-public class TC_0004 {
+public class TC_0004 extends TestBaseFinal {
     /*
     TC_0004-Us_0010 4)"Rooms" kismina tiklandiktan sonra "Categories" kismi gorunur ve onun altinda bulunan kategoriler kullanilabilir olmali
      */
+
+
+
     @Test
     public void test1() throws InterruptedException {
+        extentTest = extentReports.createTest("TC_0004 from uS_0010 ","Categories kismi ve butonlari calisir");
 
         Driver.getDriver().get(ConfigReader.getProperty("mainUrl"));
         MainPage mainPage = new MainPage();
@@ -21,10 +26,9 @@ public class TC_0004 {
 
         Actions actions = new Actions(Driver.getDriver());
         actions.sendKeys(Keys.PAGE_DOWN).perform();
-
         Thread.sleep(2000);
-
         US_0010_QAConcortPage US_0010_QAConcortPage = new US_0010_QAConcortPage();
+
 
         Assert.assertTrue(US_0010_QAConcortPage.categoriesText.isDisplayed(),"categories yazisi gozukmuyor");
         Assert.assertTrue(US_0010_QAConcortPage.singleButton.isDisplayed(),"single butonu gozukmuyor");
@@ -33,8 +37,8 @@ public class TC_0004 {
         Assert.assertTrue(US_0010_QAConcortPage.quadButton.isDisplayed(),"quad butonu gozukmuyor");
         Assert.assertTrue(US_0010_QAConcortPage.queenButton.isDisplayed(),"queen butonu gozukmuyor");
 
-        actions.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).
-                sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).perform();
+        actions.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).
+                sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).perform();
 
         Thread.sleep(2000);
 
@@ -43,11 +47,14 @@ public class TC_0004 {
         Assert.assertTrue(US_0010_QAConcortPage.doubleDoubleButton.isDisplayed(),"double-double butonu gozukmuyor");
         Assert.assertTrue(US_0010_QAConcortPage.studioButton.isDisplayed(),"studio butonu gozukmuyor");
 
+        extentTest.pass("tum kisimlar gozukuyor");
+
         Driver.closeDriver();
     }
 
     @Test
     public void test2() throws InterruptedException {
+
         Driver.getDriver().get(ConfigReader.getProperty("mainUrl"));
         MainPage mainPage = new MainPage();
         mainPage.roomsLink.click();
@@ -55,10 +62,10 @@ public class TC_0004 {
         Actions actions = new Actions(Driver.getDriver());
         US_0010_QAConcortPage US_0010_QAConcortPage = new US_0010_QAConcortPage();
 
-
         actions.sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).
                 sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).
                 sendKeys(Keys.ARROW_DOWN).perform();
+
 
         Thread.sleep(1000);
         US_0010_QAConcortPage.singleButton.click();
@@ -105,6 +112,7 @@ public class TC_0004 {
         Thread.sleep(1200);
         Assert.assertFalse(mainPage.roomsLink.equals(Driver.getDriver().getCurrentUrl()),"Studio buttonu calismiyor");
         US_0010_QAConcortPage.geriGitmeTusu();
+        extentTest.pass("tum butonlar calisiyor");
 
         Driver.closeDriver();
     }

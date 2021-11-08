@@ -7,8 +7,9 @@ import org.testng.annotations.Test;
 import pages.DefaultPage;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseFinal;
 
-public class TC_0002 {
+public class TC_0002 extends TestBaseFinal {
 
     ReusableMethods reusableMethods = new ReusableMethods();
     DefaultPage defaultPage=new DefaultPage();
@@ -23,15 +24,22 @@ public class TC_0002 {
         "Password" butonuna geçerli bir password girin
         "Login" Butonuna tıklayın
         */
-        reusableMethods.login();
 
+        extentTest= extentReports.createTest("tc_0002 Yönetici eklenecek otel name,adress,phone ve mail bilgileri ilgili kutucuga girer","otel name,adress,phone ve mail bilgilerinin ilgili alana girilebildigini test eder");
+
+        reusableMethods.login();
+        extentTest.info("istenen sayfaya gidildi");
         //  "Hotel Management" menüsüne tıklayın
         defaultPage.hotelManagementLinki.click();
+        extentTest.info("hotel management linkine tıklandı");
         // "Hotel List" menüsüne tıklayın
         defaultPage.hotelListLink.click();
+        extentTest.info("hotel list linkine tıklandı");
         //"Add Hotel" Buttonuna tıklayın
         defaultPage.addHotelLink.click();
-        //"Code" kutucuğuna tıklayıp bir Kod giriniz
+        extentTest.info(" addHotel  linkine tıklandı");
+
+
         defaultPage.addHotelCodeKutusu.sendKeys("1453");
 
         /*
@@ -53,5 +61,6 @@ public class TC_0002 {
                 sendKeys(Keys.TAB).
                 sendKeys("fatih1453@gmail.com").perform();
 
+        extentTest.info("Yönetici eklenecek otel name,adress,phone ve mail bilgileri girdi");
     }
 }

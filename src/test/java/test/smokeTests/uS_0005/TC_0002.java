@@ -6,10 +6,11 @@ import org.testng.annotations.Test;
 import pages.DefaultPage;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseFinal;
 
 import java.util.Set;
 
-public class TC_0002 {
+public class TC_0002 extends TestBaseFinal {
 
   //  2)"Details" butonuna tıklanılabilmeli ve çıkan sayfada "Edit hotel" yazısı kontrol edilmeli
 
@@ -17,7 +18,7 @@ public class TC_0002 {
     DefaultPage defaultPage = new DefaultPage();
 
     @Test
-    public void tc_0002() {
+    public void tc_0002()  {
         reusableMethods.login();
         defaultPage.hotelManagementLinki.click();
         defaultPage.hotelListLink.click();

@@ -25,13 +25,23 @@ public class TC_0001 extends TestBaseFinal{
    // 1)Menüden "Hotel Management'' ardından "Hotel List" menüsüne tıklanılabilmeli ve Çıkan sayfada "List of Hotel" yazısı görülmeli
 
         @Test
-        public void tc_0001(){
+        public void tc_0001() {
+                extentTest= extentReports.createTest("tc_0001 Default Page içerisinden Hotellist menüsüne geçiş ","List of Hotel Yazısı görülmeli");
                 reusableMethods.login();
+                extentTest.info("Siteye giriş yapıldı");
                 defaultPage.hotelManagementLinki.click();
+                extentTest.info("HotelManagement'e tıklanıldı");
+
                 defaultPage.hotelListLink.click();
+                extentTest.info("HotelListesi açıldı");
+
                 String ListOfHotelYazisi = Driver.getDriver().findElement(By.linkText("List Of Hotels")).getText();
                 String expectedResult = "List Of Hotels";
                 Assert.assertEquals(ListOfHotelYazisi,expectedResult,"List Of Hotel yazısı birbiriyle uyuşmadı");
+                extentTest.info("List of Hotel yazisi görüldü");
+
+
+
 
 
 

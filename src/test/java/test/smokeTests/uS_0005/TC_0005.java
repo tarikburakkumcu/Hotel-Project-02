@@ -21,10 +21,15 @@ public class TC_0005 extends TestBaseFinal{
     @Test
     public void tc_0005() throws InterruptedException {
 
+        extentTest= extentReports.createTest("tc_0005 Herhangi bir kayıt silinebilmeli ve Uyarı ekranına çıkmalı ","Would you like to continue? Yazısı görülmeli");
         reusableMethods.login();
+        extentTest.info("Siteye giriş yapıldı");
         defaultPage.hotelManagementLinki.click();
+        extentTest.info("HotelManagement'e tıklanıldı");
         defaultPage.hotelListLink.click();
+        extentTest.info("Hotel Listte tıklanıldı");
         defaultPage.detailsHotelLinki.click();
+        extentTest.info("Details sayfasına tıklanıldı.");
 
 
         System.out.println("ilk sayfanin handle değeri :" + Driver.getDriver().getWindowHandle());
@@ -44,12 +49,13 @@ public class TC_0005 extends TestBaseFinal{
 
         WebElement deleteButonu = Driver.getDriver().findElement(By.xpath("//button[@id='btnDelete']"));
         deleteButonu.click();
+        extentTest.info("Delete butonuna tıklanıldı.");
 
         Thread.sleep(3000);
         String uyariYazisi = Driver.getDriver().findElement(By.xpath("//div[@class='bootbox-body']")).getText();
         String expectedResult ="Would you like to continue?";
         Assert.assertEquals(expectedResult,uyariYazisi,"uyari yazisi ile uyuşmuyor");
-
+        extentTest.info("Uyarı yazısı görüldü");
 
 
 

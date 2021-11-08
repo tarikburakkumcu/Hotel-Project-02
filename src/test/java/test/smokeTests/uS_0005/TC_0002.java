@@ -19,10 +19,15 @@ public class TC_0002 extends TestBaseFinal {
 
     @Test
     public void tc_0002()  {
+        extentTest= extentReports.createTest("tc_0002 Details Butonuna tıklayıp Edit hotel sayfasına geçiş yapıldı","Edit Hotel Yazısı görülmeli");
         reusableMethods.login();
+        extentTest.info("Siteye giriş yapıldı");
         defaultPage.hotelManagementLinki.click();
+        extentTest.info("HotelManagement'e tıklanıldı");
         defaultPage.hotelListLink.click();
+        extentTest.info("Hotel Listte tıklanıldı");
         defaultPage.detailsHotelLinki.click();
+        extentTest.info("Details sayfasına tıklanıldı.");
 
         System.out.println("ilk sayfanin handle değeri :" + Driver.getDriver().getWindowHandle());
         String ilkSayfaHandle=Driver.getDriver().getWindowHandle();
@@ -44,7 +49,7 @@ public class TC_0002 extends TestBaseFinal {
         String EditHotelYazisi = Driver.getDriver().findElement(By.xpath("/html//form[@id='edit-form']/div/div[@class='portlet-title']/div[@class='caption']")).getText();
         String expectedResult ="Edit Hotel";
         Assert.assertEquals(EditHotelYazisi,expectedResult,"Edit Hotel yazısı birbiriyle uyuşmadı");
-
+        extentTest.info("Edit Hotel Yazısı Görüldü");
 
 
 

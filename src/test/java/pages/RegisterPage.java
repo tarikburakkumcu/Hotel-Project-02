@@ -53,7 +53,6 @@ public class RegisterPage {
     public WebElement regSaveButton;
 
      @FindBy(xpath = "(//div[text()='User Data was inserted successfully'])[2]")
-   // @FindBy(xpath = "//div[text()='this email address is already taken']")
      public WebElement regAlertMessage;
 
      @FindBy(xpath = "//button[@class='btn btn-primary']")

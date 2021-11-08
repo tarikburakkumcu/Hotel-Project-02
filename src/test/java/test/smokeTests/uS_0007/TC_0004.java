@@ -64,6 +64,11 @@ public class TC_0004 extends TestBaseFinal {
         extentTest.info("save butonu tıklandı");
         hotelRoomPage.editHotelRoomAddPropertyValueAddedOkButton.click();
         extentTest.info("ValueAddedOk butonu tıklandı");
+        hotelRoomPage.editHotelRoomAddPropertySaveButton.click();
+        hotelRoomPage.editHotelRoomAddPropertySaveButton.click();
+        Thread.sleep(2000);
+        //hotelRoomPage.editHotelRoomAddPropertyValueAddedOkButton.click();
+
         //not=Add Ok Butonu bazen cikiyor bazen cikmiyor
         //Driver.closeDriver();
 }

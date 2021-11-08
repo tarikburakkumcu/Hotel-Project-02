@@ -24,6 +24,7 @@ public class TestBaseFinal {
     extentReports.setSystemInfo("Environment", "QA");
     extentReports.setSystemInfo("Browser", ConfigReader.getProperty("browser"));
     extentHtmlReporter.config().setDocumentTitle("Concort Hotel");
+
     }
 
    @AfterMethod
@@ -38,6 +39,7 @@ public class TestBaseFinal {
         } else if (result.getStatus() == ITestResult.SKIP) {
             extentTest.skip("Test Case is skipped: " + result.getName());
         }
+
     }
 
 
